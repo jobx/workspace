@@ -1,0 +1,1067 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     27572,       1058]
+NotebookOptionsPosition[     20992,        809]
+NotebookOutlinePosition[     21588,        832]
+CellTagsIndexPosition[     21509,        827]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellChangeTimes->{3.410894606249012*^9},
+ CellID->6298],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1227],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->4514],
+
+Cell["NumericalAnalysis", "Categorization",
+ CellChangeTimes->{{3.410888631979097*^9, 3.4108886398616886`*^9}, {
+  3.4108896172604647`*^9, 3.41088961873242*^9}},
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["NumericalAnalysis`", "Categorization",
+ CellChangeTimes->{{3.410888643096857*^9, 3.4108886502482805`*^9}},
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["NumericalAnalysis/ref/NResidue", "Categorization",
+ CellChangeTimes->{{3.410888656057561*^9, 3.410888667776281*^9}, {
+  3.410888845019417*^9, 3.4108888464617205`*^9}},
+ CellLabel->"URI",
+ CellID->31593272]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection"],
+
+Cell["XXXX", "Synonyms"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->20801],
+
+Cell["XXXX", "Keywords",
+ CellID->30339]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->21135],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->24828],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->30633],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->437],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->32134]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["NumResidue", "ObjectName",
+ CellChangeTimes->{
+  3.34616728557813*^9, {3.4146968251447716`*^9, 3.4146968253791914`*^9}},
+ CellID->19659],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["z", "TI"], ",", 
+      SubscriptBox[
+       StyleBox["z", "TI"], 
+       StyleBox["0", "TR"]]}], "}"}]}], "]"}]], "InlineFormula",
+  CellChangeTimes:>{3.34616731695313*^9}],
+ " \[LineSeparator]numerically finds the residue of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " near the point ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["z", "TI"], "=", 
+   SubscriptBox[
+    StyleBox["z", "TI"], 
+    StyleBox["0", "TR"]]}]], "InlineFormula"],
+ "."
+}], "Usage",
+ CellChangeTimes->{
+  3.34616733079688*^9, {3.4146968297394037`*^9, 3.414696830020707*^9}},
+ CellID->24540],
+
+Cell[TextData[{
+ "The expression ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " must be numeric when its argument ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ " is numeric."
+}], "Notes",
+ CellChangeTimes->{3.32655006735938*^9},
+ CellID->29368],
+
+Cell[TextData[{
+ "The residue is defined as the coefficient of ",
+ Cell[BoxData[
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     StyleBox["z", "TI"], "-", 
+     SubscriptBox[
+      StyleBox["z", "TI"], 
+      StyleBox["0", "TR"]]}], ")"}], 
+   RowBox[{"-", 
+    StyleBox["1", "TR"]}]]], "InlineFormula"],
+ " in the Laurent expansion of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellChangeTimes:>{3.3256052965*^9, 3.3260456745525*^9, 3.32766210314063*^9, 
+  3.34616738685938*^9},
+ CellID->10282],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " numerically integrates around a small circle centered at the point ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["z", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ " in the complex plane. ",
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " will return an incorrect result when the punctured disk is not analytic."
+}], "Notes",
+ CellChangeTimes->{
+  3.32655016159375*^9, 3.32655019504688*^9, 3.32655891329688*^9, 
+   3.32656069042188*^9, 3.32715295464063*^9, 3.3461674065*^9, {
+   3.4146968625269475`*^9, 3.414696868418703*^9}},
+ CellID->1848],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " is unable to recognize small numbers that should in fact be zero. ",
+ Cell[BoxData[
+  ButtonBox["Chop",
+   BaseStyle->"FunctionLink"]], "InlineFormula"],
+ " is often needed to eliminate these spurious residuals."
+}], "Notes",
+ CellChangeTimes->{
+  3.32655067823438*^9, 3.32715295601563*^9, {3.4146968723100753`*^9, 
+   3.4146968726070075`*^9}},
+ CellID->20366],
+
+Cell[TextData[{
+ "Although ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"FunctionLink"]], "InlineFormula"],
+ " usually needs to be able to evaluate power series at a point, ",
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " can find residues even if the power series cannot be computed."
+}], "Notes",
+ CellChangeTimes->{
+  3.32560543207813*^9, 3.32656077640625*^9, 3.3461674168125*^9, 
+   3.35247200320947*^9, {3.4146968831559076`*^9, 3.4146968834840956`*^9}},
+ CellID->23290],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " has the same options as ",
+ Cell[BoxData[
+  ButtonBox["NIntegrate",
+   BaseStyle->"FunctionLink"]], "InlineFormula"],
+ ", with the following additions and changes:"
+}], "Notes",
+ CellChangeTimes->{
+  3.32775268178125*^9, 3.32775271871875*^9, 3.32775283315625*^9, {
+   3.4146968907042313`*^9, 3.414696891032419*^9}},
+ CellID->3227],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "ModInfo"], 
+    ButtonBox["Method",
+     BaseStyle->"Link"], "Trapezoidal", Cell[
+    "integration method to use", "TableText",
+     CellChangeTimes:>{3.34616815721875*^9, 3.346168209125*^9}]}
+  }]], "3ColumnTableMod",
+ CellChangeTimes->{
+  3.34616815721875*^9, 3.346168209125*^9, 3.3464246165*^9, {
+   3.382896991565722*^9, 3.3828969916282187`*^9}, {3.3853077850882797`*^9, 
+   3.385307794572594*^9}, {3.4146968414135194`*^9, 3.4146968592450676`*^9}},
+ CellID->14458]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->32071],
+
+Cell[TextData[ButtonBox["Numerical Analysis Package",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:NumericalAnalysis/tutorial/NumericalAnalysis"]], "Tutorials",
+ CellChangeTimes->{3.400891101067175*^9},
+ CellID->30106]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->6305],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->11001]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->25434],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NumSeries",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NumSeries"]], "InlineFormula"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["NumLimit",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NumLimit"]], "InlineFormula"],
+ " \[EmptyVerySmallSquare] ",
+ Cell[BoxData[
+  ButtonBox["NumD",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NumD"]], "InlineFormula"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.3845448742129*^9, 3.384544902587438*^9}},
+ CellID->1770]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->994455030],
+
+Cell[TextData[ButtonBox["Numerical Analysis Package",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:NumericalAnalysis/guide/NumericalAnalysisPackage"]], "MoreAbout"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Extensions / Related Packages", "ExtensionsSection",
+ CellID->9555],
+
+Cell["XXXX", "Extensions",
+ CellID->8507]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->4299],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.4146994556809874`*^9, 3.4146994583377476`*^9}},
+ CellID->155925627],
+
+Cell[TextData[{
+ "Residue of the function ",
+ Cell[BoxData[
+  FractionBox["1", 
+   StyleBox["x", "TI"]]]],
+ " about the origin:"
+}], "ExampleText",
+ CellChangeTimes->{3.32560410282813*^9, 3.32560453285938*^9},
+ CellID->7730],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NumResidue", "[", 
+  RowBox[{
+   FractionBox["1", "x"], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.32560412625*^9, {3.4146994616352553`*^9, 3.4146994618540473`*^9}},
+ CellLabel->"In[2]:=",
+ CellID->4075],
+
+Cell[BoxData["1.`"], "Output",
+ CellChangeTimes->{3.32560412760938*^9, 3.32655070953125*^9, 
+  3.4146994634949875`*^9},
+ CellLabel->"Out[2]=",
+ CellID->127134260]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->21439],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Scope", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->26194],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.4146994693867435`*^9, 3.4146994734343953`*^9}},
+ CellID->324530909],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " can find residues of functions with essential singularities:"
+}], "ExampleText",
+ CellFrameLabels->{{None, None}, {None, None}},
+ CellChangeTimes->{{3.4146994769194393`*^9, 3.4146994771226034`*^9}},
+ CellID->22488],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     FractionBox["1", 
+      RowBox[{"10", "x"}]], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0"}], "}"}]}], "]"}], "//", "Chop"}]], "Input",
+ CellChangeTimes->{{3.4146994792636395`*^9, 3.4146994794668036`*^9}},
+ CellLabel->"In[2]:=",
+ CellID->28664],
+
+Cell[BoxData["0.10000000000000622`"], "Output",
+ CellChangeTimes->{3.4146994803575993`*^9},
+ CellLabel->"Out[2]=",
+ CellID->1199702]
+}, Open  ]],
+
+Cell[TextData[{
+ "Since ",
+ Cell[BoxData[
+  ButtonBox["Series",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " is unable to handle essential singularities, ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " returns unevaluated:"
+}], "ExampleText",
+ CellID->27048],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Residue", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    FractionBox["1", 
+     RowBox[{"10", "x"}]], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.32560510067188*^9},
+ CellLabel->"In[3]:=",
+ CellID->25358],
+
+Cell[BoxData[
+ RowBox[{"Residue", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    FractionBox["1", 
+     RowBox[{"10", " ", "x"}]], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.414699484655299*^9},
+ CellLabel->"Out[3]=",
+ CellID->66374631]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->32487],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.4146994897812834`*^9, 3.4146994913284554`*^9}},
+ CellID->969307522],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " allows for some error in the location of the pole:"
+}], "ExampleText",
+ CellChangeTimes->{{3.4146994944071712`*^9, 3.4146994947041035`*^9}},
+ CellID->19764],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"1.7", "-", 
+      RowBox[{"2.7", "z"}], "+", 
+      SuperscriptBox["z", "2"]}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "1."}], "}"}]}], "]"}], "//", "Chop"}]], "Input",
+ CellChangeTimes->{
+  3.32560583354688*^9, 3.32560588164063*^9, 3.32655072026563*^9, {
+   3.414699496985791*^9, 3.4146994971889553`*^9}},
+ CellLabel->"In[2]:=",
+ CellID->23713],
+
+Cell[BoxData[
+ RowBox[{"-", "1.4285714285714202`"}]], "Output",
+ CellChangeTimes->{3.32560583409375*^9, 3.32560588195313*^9, 
+  3.32655072060938*^9, 3.346167554*^9, 3.414699497845331*^9},
+ CellLabel->"Out[2]=",
+ CellID->243339595]
+}, Open  ]],
+
+Cell[TextData[{
+ "Due to machine-precision arithmetic, ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["z", "TI"], "\[Rule]", 
+   StyleBox[
+    RowBox[{
+     StyleBox["1", "TR"], "."}]]}]], "InlineFormula"],
+ " is not a pole:"
+}], "ExampleText",
+ CellChangeTimes->{3.35247213676062*^9, 3.3845449937113867`*^9},
+ CellID->12452],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"1.7", "-", 
+    RowBox[{"2.7", "z"}], "+", 
+    SuperscriptBox["z", "2"]}]], "/.", 
+  RowBox[{"z", "->", "1."}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->18170],
+
+Cell[BoxData[
+ RowBox[{"-", "4.503599627370496`*^15"}]], "Output",
+ CellChangeTimes->{3.4146995019398675`*^9},
+ CellLabel->"Out[3]=",
+ CellID->83907230]
+}, Open  ]],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", the error in the location of the pole yields a result of zero:"
+}], "ExampleText",
+ CellID->6766],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Residue", "[", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"1.7", "-", 
+     RowBox[{"2.7", "z"}], "+", 
+     SuperscriptBox["z", "2"]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", "1."}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.32560582348438*^9, 3.32560586823438*^9},
+ CellLabel->"In[4]:=",
+ CellID->12704],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.32560582751563*^9, 3.32560587226563*^9, 
+  3.32655071621875*^9, 3.4146995051904917`*^9},
+ CellLabel->"Out[4]=",
+ CellID->313133000]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Options", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->20432],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["WorkingPrecision", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{3.32352860251445*^9, 3.32352865622057*^9, 
+  3.32353048992616*^9},
+ CellID->15846],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.4146995580443873`*^9, 3.4146995591383476`*^9}},
+ CellID->782532174],
+
+Cell[TextData[{
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " accepts options for ",
+ Cell[BoxData[
+  ButtonBox["NIntegrate",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", which are sometimes necessary to get an accurate result:"
+}], "ExampleText",
+ CellChangeTimes->{
+  3.35247216304271*^9, {3.3828970419221964`*^9, 3.3828970419221964`*^9}, {
+   3.3854042071490173`*^9, 3.385404278704146*^9}, {3.4146995693278036`*^9, 
+   3.4146995695465956`*^9}},
+ CellID->867371608],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      FractionBox["1", "x"], "]"}], "+", 
+     RowBox[{"Exp", "[", 
+      FractionBox["1", 
+       RowBox[{"x", "-", 
+        FractionBox["1", "100"]}]], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0"}], "}"}], ",", 
+    RowBox[{"Radius", "->", 
+     FractionBox["1", "200"]}], ",", 
+    RowBox[{"MaxRecursion", "->", "10"}], ",", 
+    RowBox[{"WorkingPrecision", "->", "100"}], ",", 
+    RowBox[{"PrecisionGoal", "->", "10"}]}], "]"}], "//", "Chop"}]], "Input",
+ CellChangeTimes->{
+  3.32605191834937*^9, 3.32605199703687*^9, 3.3265508341875*^9, {
+   3.4146995723596354`*^9, 3.414699572594055*^9}},
+ CellLabel->"In[3]:=",
+ CellID->5456],
+
+Cell[BoxData["1.\
+000000000000000000000000002006386952700058392188864677721150893691694742347104\
+9834654174562762777301821727072697612`100.15051499783199"], "Output",
+ CellChangeTimes->{3.32605199922437*^9, 3.32655078767188*^9, 
+  3.32655083664063*^9, 3.4146995775950155`*^9},
+ CellLabel->"Out[3]=",
+ CellID->539072349]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Applications", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->19714],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.414699582033367*^9, 3.4146995883470793`*^9}},
+ CellID->80968281],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData["NumResidue"], "InlineFormula"],
+ " to evaluate derivatives of a function evaluated at a point:"
+}], "ExampleText",
+ CellChangeTimes->{{3.414699591800867*^9, 3.4146995920196595`*^9}},
+ CellID->25599],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Derivative", "[", "10", "]"}], "[", "Zeta", "]"}], "[", "0", 
+   "]"}], "//", 
+  RowBox[{
+   RowBox[{"N", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{"30", ",", "30"}], "}"}]}], "]"}], "&"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->30041],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  "3.62879999945676588422029152776801105687968991`30.*^6"}]], "Output",
+ CellChangeTimes->{3.4146995997867756`*^9},
+ CellLabel->"Out[3]=",
+ CellID->243858016]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"10", "!"}], 
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"Zeta", "[", "x", "]"}], 
+     SuperscriptBox["x", "11"]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0"}], "}"}], ",", 
+    RowBox[{"WorkingPrecision", "->", "30"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.4146995955984716`*^9, 3.4146996054753675`*^9}},
+ CellLabel->"In[4]:=",
+ CellID->18074],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "-", "3.62879999945676588422029152776790352579932644`27.023862259044414*^6"}\
+], "+", 
+  RowBox[{"0``20.464099226232637", " ", "\[ImaginaryI]"}]}]], "Output",
+ CellLabel->"Out[4]=",
+ CellID->12324]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->10344],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalAnalysis`\>\"", "]"}]], "Input", \
+"Deemphasis",
+ CellChangeTimes->{{3.414699614852167*^9, 3.4146996158992434`*^9}},
+ CellID->13713554],
+
+Cell["Residues of numerical functions:", "ExampleText",
+ CellChangeTimes->{3.32604912899*^9},
+ CellID->29863],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"a_", "?", "NumericQ"}], "]"}], ":=", 
+  RowBox[{"NIntegrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Exp", "[", 
+      FractionBox[
+       SuperscriptBox["t", "2"], "a"], "]"}], 
+     FractionBox["1", 
+      RowBox[{"10", "+", 
+       RowBox[{"a", " ", "t"}]}]]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{3.32604886200562*^9, 3.32604914016187*^9, 
+  3.32604920714625*^9, 3.32604926714625*^9, 3.32604940559937*^9, 
+  3.32604950833375*^9, 3.32604969583375*^9, 3.32604987799*^9, 
+  3.32604994595875*^9},
+ CellLabel->"In[2]:=",
+ CellID->13749],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NumResidue", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "a", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "0"}], "}"}]}], "]"}], "//", "Chop"}]], "Input",
+ CellChangeTimes->{
+  3.32604887516187*^9, 3.32604895647437*^9, 3.32604925194312*^9, 
+   3.3260493240525*^9, 3.32604946084937*^9, 3.32604951234937*^9, 
+   3.32604985464625*^9, 3.32604993003687*^9, 3.32604997789625*^9, 
+   3.32655096182813*^9, {3.4146996269951234`*^9, 3.4146996273233113`*^9}, 
+   3.4146996777236114`*^9},
+ CellLabel->"In[3]:=",
+ CellID->29276],
+
+Cell[BoxData["0.03251817677562594`"], "Output",
+ CellLabel->"Out[2]=",
+ CellID->10597]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Neat Examples", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->24290]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Design Discussion", "DesignDiscussionSection",
+ CellID->29059],
+
+Cell["XXXX", "DesignDiscussion",
+ CellID->31684]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Application Notes", "ApplicationNotesSection",
+ CellID->4546],
+
+Cell["XXXX", "ApplicationNotes",
+ CellID->32759]
+}, Open  ]]
+},
+WindowSize->{740, 734},
+WindowMargins->{{109, Automatic}, {Automatic, 47}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (January 24, 2008)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[9695, 379, 95, 2, 53, "ExtendedExamplesSection",
+   CellTags->"ExtendedExamples",
+   CellID->21439]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 21377, 820}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 359, 15, 22, "History",
+ CellID->6298],
+Cell[CellGroupData[{
+Cell[952, 40, 62, 1, 27, "CategorizationSection",
+ CellID->1227],
+Cell[1017, 43, 74, 2, 31, "Categorization",
+ CellID->4514],
+Cell[1094, 47, 208, 4, 31, "Categorization",
+ CellID->605800465],
+Cell[1305, 53, 155, 3, 31, "Categorization",
+ CellID->468444828],
+Cell[1463, 58, 211, 4, 31, "Categorization",
+ CellID->31593272]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1711, 67, 35, 0, 17, "SynonymsSection"],
+Cell[1749, 69, 24, 0, 70, "Synonyms"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1810, 74, 51, 1, 17, "KeywordsSection",
+ CellID->20801],
+Cell[1864, 77, 40, 1, 17, "Keywords",
+ CellID->30339]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1941, 83, 60, 1, 17, "TemplatesSection",
+ CellID->21135],
+Cell[2004, 86, 89, 2, 70, "Template",
+ CellID->24828],
+Cell[2096, 90, 78, 2, 70, "Template",
+ CellID->30633],
+Cell[2177, 94, 74, 2, 70, "Template",
+ CellID->437],
+Cell[2254, 98, 78, 2, 70, "Template",
+ CellID->32134]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2369, 105, 33, 0, 17, "DetailsSection"],
+Cell[2405, 107, 49, 1, 70, "Details"],
+Cell[2457, 110, 47, 1, 70, "Details"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2541, 116, 142, 3, 62, "ObjectName",
+ CellID->19659],
+Cell[2686, 121, 761, 27, 73, "Usage",
+ CellID->24540],
+Cell[3450, 150, 278, 10, 25, "Notes",
+ CellID->29368],
+Cell[3731, 162, 539, 19, 25, "Notes",
+ CellID->10282],
+Cell[4273, 183, 616, 15, 41, "Notes",
+ CellID->1848],
+Cell[4892, 200, 426, 11, 39, "Notes",
+ CellID->20366],
+Cell[5321, 213, 488, 12, 39, "Notes",
+ CellID->23290],
+Cell[5812, 227, 396, 11, 25, "Notes",
+ CellID->3227],
+Cell[6211, 240, 511, 11, 23, "3ColumnTableMod",
+ CellID->14458]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6759, 256, 53, 1, 43, "TutorialsSection",
+ CellID->32071],
+Cell[6815, 259, 217, 5, 16, "Tutorials",
+ CellID->30106]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7069, 269, 59, 1, 30, "RelatedLinksSection",
+ CellID->6305],
+Cell[7131, 272, 44, 1, 16, "RelatedLinks",
+ CellID->11001]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7212, 278, 50, 1, 30, "SeeAlsoSection",
+ CellID->25434],
+Cell[7265, 281, 683, 21, 19, "SeeAlso",
+ CellID->1770]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7985, 307, 58, 1, 30, "MoreAboutSection",
+ CellID->994455030],
+Cell[8046, 310, 163, 3, 16, "MoreAbout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8246, 318, 73, 1, 30, "ExtensionsSection",
+ CellID->9555],
+Cell[8322, 321, 41, 1, 16, "Extensions",
+ CellID->8507]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8400, 327, 351, 11, 68, "PrimaryExamplesSection",
+ CellID->4299],
+Cell[8754, 340, 189, 4, 23, "Input",
+ CellID->155925627],
+Cell[8946, 346, 224, 8, 29, "ExampleText",
+ CellID->7730],
+Cell[CellGroupData[{
+Cell[9195, 358, 286, 9, 41, "Input",
+ CellID->4075],
+Cell[9484, 369, 162, 4, 25, "Output",
+ CellID->127134260]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9695, 379, 95, 2, 53, "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->21439],
+Cell[CellGroupData[{
+Cell[9815, 385, 120, 3, 30, "ExampleSection",
+ CellID->26194],
+Cell[9938, 390, 189, 4, 23, "Input",
+ CellID->324530909],
+Cell[10130, 396, 280, 6, 23, "ExampleText",
+ CellID->22488],
+Cell[CellGroupData[{
+Cell[10435, 406, 353, 11, 42, "Input",
+ CellID->28664],
+Cell[10791, 419, 132, 3, 25, "Output",
+ CellID->1199702]
+}, Open  ]],
+Cell[10938, 425, 296, 11, 23, "ExampleText",
+ CellID->27048],
+Cell[CellGroupData[{
+Cell[11259, 440, 288, 10, 42, "Input",
+ CellID->25358],
+Cell[11550, 452, 298, 10, 41, "Output",
+ CellID->66374631]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11885, 467, 121, 3, 17, "ExampleDelimiter",
+ CellID->32487],
+Cell[12009, 472, 189, 4, 23, "Input",
+ CellID->969307522],
+Cell[12201, 478, 222, 5, 23, "ExampleText",
+ CellID->19764],
+Cell[CellGroupData[{
+Cell[12448, 487, 456, 14, 43, "Input",
+ CellID->23713],
+Cell[12907, 503, 230, 5, 25, "Output",
+ CellID->243339595]
+}, Open  ]],
+Cell[13152, 511, 319, 11, 23, "ExampleText",
+ CellID->12452],
+Cell[CellGroupData[{
+Cell[13496, 526, 219, 8, 43, "Input",
+ CellID->18170],
+Cell[13718, 536, 152, 4, 25, "Output",
+ CellID->83907230]
+}, Open  ]],
+Cell[13885, 543, 207, 7, 23, "ExampleText",
+ CellID->6766],
+Cell[CellGroupData[{
+Cell[14117, 554, 343, 11, 43, "Input",
+ CellID->12704],
+Cell[14463, 567, 181, 4, 25, "Output",
+ CellID->313133000]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14705, 578, 122, 3, 30, "ExampleSection",
+ CellID->20432],
+Cell[CellGroupData[{
+Cell[14852, 585, 223, 5, 21, "ExampleSubsection",
+ CellID->15846],
+Cell[15078, 592, 189, 4, 23, "Input",
+ CellID->782532174],
+Cell[15270, 598, 472, 12, 36, "ExampleText",
+ CellID->867371608],
+Cell[CellGroupData[{
+Cell[15767, 614, 755, 22, 78, "Input",
+ CellID->5456],
+Cell[16525, 638, 320, 6, 45, "Output",
+ CellID->539072349]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16906, 651, 127, 3, 30, "ExampleSection",
+ CellID->19714],
+Cell[17036, 656, 186, 4, 23, "Input",
+ CellID->80968281],
+Cell[17225, 662, 238, 6, 23, "ExampleText",
+ CellID->25599],
+Cell[CellGroupData[{
+Cell[17488, 672, 320, 12, 27, "Input",
+ CellID->30041],
+Cell[17811, 686, 187, 5, 25, "Output",
+ CellID->243858016]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18035, 696, 421, 13, 42, "Input",
+ CellID->18074],
+Cell[18459, 711, 234, 7, 25, "Output",
+ CellID->12324]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18730, 723, 121, 3, 17, "ExampleDelimiter",
+ CellID->10344],
+Cell[18854, 728, 186, 4, 23, "Input",
+ CellID->13713554],
+Cell[19043, 734, 109, 2, 20, "ExampleText",
+ CellID->29863],
+Cell[19155, 738, 673, 20, 45, "Input",
+ CellID->13749],
+Cell[CellGroupData[{
+Cell[19853, 762, 556, 14, 27, "Input",
+ CellID->29276],
+Cell[20412, 778, 86, 2, 25, "Output",
+ CellID->10597]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[20537, 785, 128, 3, 30, "ExampleSection",
+ CellID->24290]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20702, 793, 68, 1, 78, "DesignDiscussionSection",
+ CellID->29059],
+Cell[20773, 796, 48, 1, 16, "DesignDiscussion",
+ CellID->31684]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20858, 802, 67, 1, 30, "ApplicationNotesSection",
+ CellID->4546],
+Cell[20928, 805, 48, 1, 16, "ApplicationNotes",
+ CellID->32759]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,252 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      7209,        243]
+NotebookOptionsPosition[      5652,        190]
+NotebookOutlinePosition[      6012,        206]
+CellTagsIndexPosition[      5969,        203]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "RealTime Interface to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{{3.4333431087048645`*^9, 3.433343110783016*^9}, {
+  3.433343488990982*^9, 3.433343494022297*^9}}],
+
+Cell[TextData[{
+ "This is a sample to demonstrate real time input to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". It makes use of preemptive computation and Dynamic."
+}], "Text",
+ CellChangeTimes->{{3.43334273016877*^9, 3.433342744247075*^9}, {
+  3.43334311418931*^9, 3.4333431259550858`*^9}, {3.4333433019729633`*^9, 
+  3.433343313238733*^9}}],
+
+Cell[TextData[{
+ "This is designed to be run as a Workbench ",
+ StyleBox["J/Link",
+  FontSlant->"Italic"],
+ " project, it could also be built and installed as a ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " application.  "
+}], "Text",
+ CellChangeTimes->{{3.43334293726517*^9, 3.4333429570310483`*^9}, {
+   3.4333432968010225`*^9, 3.4333433449891396`*^9}, 3.474368826736423*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Load and Run", "Section",
+ CellChangeTimes->{{3.433342748903384*^9, 3.4333427515596685`*^9}, {
+  3.4333431036891756`*^9, 3.4333431053141966`*^9}}],
+
+Cell[TextData[{
+ "This load a particular RealTime device application, ",
+ StyleBox["DeviceInterface`NumberFeed`", "MR"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.4333427837632055`*^9, 3.433342797232128*^9}, {
+  3.4333433498642015`*^9, 3.4333433575830507`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<DeviceInterface`NumberFeed`\>\"", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.4333427725286865`*^9, 3.433342776591239*^9}}],
+
+Cell[TextData[{
+ "Here an instance of the application is created. It holds a bunch of ",
+ StyleBox["J/Link",
+  FontSlant->"Italic"],
+ " objects, and a symbol."
+}], "Text",
+ CellChangeTimes->{{3.433342811638562*^9, 3.433342818279272*^9}, {
+  3.4333433640987587`*^9, 3.4333433851771536`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"dev", "=", 
+  RowBox[{"NumberDevice", "[", "]"}]}]], "Input",
+ CellChangeTimes->{3.4333428049822273`*^9}],
+
+Cell["\<\
+The symbol in the output is updated by the system whenever there is new \
+input. This causes any dynamics to be triggered and updated. \
+\>", "Text",
+ CellChangeTimes->{{3.433342884358243*^9, 3.4333429275931716`*^9}, {
+  3.433343388989702*^9, 3.433343400442974*^9}}],
+
+Cell["Now we start the device running.", "Text",
+ CellChangeTimes->{{3.433342824326225*^9, 3.433342827779394*^9}}],
+
+Cell[BoxData[
+ RowBox[{"DeviceInterfaceStart", "[", "dev", "]"}]], "Input"],
+
+Cell[TextData[{
+ StyleBox["Capture", "MR"],
+ " gets the current state of the device, by getting the symbol."
+}], "Text",
+ CellChangeTimes->{{3.4333434061774225`*^9, 3.433343410036847*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Capture", "[", " ", "dev", "]"}]], "Input",
+ CellChangeTimes->{{3.433342858936043*^9, 3.433342876389391*^9}}],
+
+Cell[TextData[{
+ "Since ",
+ StyleBox["Capture", "MR"],
+ " returns a symbol, it is easy to use inside of ",
+ StyleBox["Dynamic", "MR"],
+ ". This gives get real time updating."
+}], "Text",
+ CellChangeTimes->{{3.4333434129900093`*^9, 3.4333434593968534`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", " ", 
+  RowBox[{"ListPlot", "[", 
+   RowBox[{"Capture", "[", "dev", "]"}], "]"}], "]"}]], "Input"],
+
+Cell["\<\
+You can capture the output of an instance of device any number of times.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", " ", 
+  RowBox[{"Capture", "[", "dev", "]"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Controlling the Device", "Subsection",
+ CellChangeTimes->{{3.433342990203348*^9, 3.433342992781506*^9}}],
+
+Cell["There are a number of controls for controlling the device.", "Text",
+ CellChangeTimes->{{3.4333429979534473`*^9, 3.4333430043910294`*^9}}],
+
+Cell["This stops the device.", "Text"],
+
+Cell[BoxData[
+ RowBox[{"DeviceInterfaceStop", "[", " ", "dev", "]"}]], "Input"],
+
+Cell["This starts the device again.", "Text"],
+
+Cell[BoxData[
+ RowBox[{"DeviceInterfaceStart", "[", " ", "dev", "]"}]], "Input"],
+
+Cell["We can also reset properties of the device.", "Text",
+ CellChangeTimes->{{3.4333430350007963`*^9, 3.433343041938385*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NumberDeviceSetUpper", "[", 
+  RowBox[{"dev", ",", " ", "50"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"NumberDeviceSetLower", "[", 
+  RowBox[{"dev", ",", " ", "20"}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Running Multiple Devices", "Subsection",
+ CellChangeTimes->{{3.433343072188772*^9, 3.433343076063822*^9}}],
+
+Cell["This creates another device", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dev1", "=", 
+   RowBox[{"NumberDevice", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DeviceInterfaceStart", "[", "dev1", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"Capture", "[", " ", "dev1", "]"}], "]"}]}], "Input"],
+
+Cell["\<\
+You can stop or change one device without interfering with another.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"DeviceInterfaceStop", "[", " ", "dev1", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"DeviceInterfaceStart", "[", " ", "dev1", "]"}]], "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{891, 882},
+WindowMargins->{{38, Automatic}, {Automatic, 90}},
+Magnification->1.5,
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 220, 6, 185, "Title"],
+Cell[790, 30, 355, 8, 62, "Text"],
+Cell[1148, 40, 386, 10, 62, "Text"],
+Cell[CellGroupData[{
+Cell[1559, 54, 152, 2, 100, "Section"],
+Cell[1714, 58, 258, 6, 39, "Text"],
+Cell[1975, 66, 162, 3, 40, "Input"],
+Cell[2140, 71, 290, 7, 39, "Text"],
+Cell[2433, 80, 129, 3, 40, "Input"],
+Cell[2565, 85, 276, 5, 62, "Text"],
+Cell[2844, 92, 114, 1, 39, "Text"],
+Cell[2961, 95, 75, 1, 40, "Input"],
+Cell[3039, 98, 188, 4, 39, "Text"],
+Cell[3230, 104, 133, 2, 40, "Input"],
+Cell[3366, 108, 256, 7, 62, "Text"],
+Cell[3625, 117, 137, 3, 40, "Input"],
+Cell[3765, 122, 96, 2, 39, "Text"],
+Cell[3864, 126, 101, 2, 40, "Input"],
+Cell[CellGroupData[{
+Cell[3990, 132, 110, 1, 51, "Subsection"],
+Cell[4103, 135, 144, 1, 61, "Text"],
+Cell[4250, 138, 38, 0, 61, "Text"],
+Cell[4291, 140, 79, 1, 64, "Input"],
+Cell[4373, 143, 45, 0, 61, "Text"],
+Cell[4421, 145, 80, 1, 64, "Input"],
+Cell[4504, 148, 127, 1, 61, "Text"],
+Cell[4634, 151, 104, 2, 64, "Input"],
+Cell[4741, 155, 104, 2, 64, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4882, 162, 112, 1, 37, "Subsection"],
+Cell[4997, 165, 43, 0, 61, "Text"],
+Cell[5043, 167, 308, 8, 147, "Input"],
+Cell[5354, 177, 91, 2, 61, "Text"],
+Cell[5448, 181, 80, 1, 64, "Input"],
+Cell[5531, 184, 81, 1, 64, "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

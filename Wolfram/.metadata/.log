@@ -1,0 +1,588 @@
+!SESSION 2018-04-28 20:51:33.898 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 20:53:04.683
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 20:53:04.698
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+!SESSION 2018-04-28 20:54:40.207 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 21:01:33.858
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 21:01:33.858
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+!SESSION 2018-04-28 22:00:14.482 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:27:03.280
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:27:03.296
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+!SESSION 2018-04-28 22:33:15.832 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 22:33:35.926
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:34:25.913
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:34:25.913
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.587
+!MESSAGE CodeIndexer:[Test] ,  full index, files 1
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.822
+!MESSAGE CodeIndexer:[Test],  finish index pass 
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.837
+!MESSAGE Starting Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 2 0 2018-04-28 22:35:05.837
+!MESSAGE Usage.m file was not found. Set the Mathematica installation path in the Preferences.
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.853
+!MESSAGE No metadata cache found; it will be regenerated from source.
+!STACK 0
+java.io.FileNotFoundException: C:\workspace\workspace\Wolfram\.metadata\.plugins\com.wolfram.eclipse.MEET\StaticSourceMetadataCache\source_to_cache_map.props (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at com.wolfram.eclipse.MEET.projectmodel.InstallationMetadataExtractor.loadFromCache(InstallationMetadataExtractor.java:107)
+	at com.wolfram.eclipse.MEET.projectmodel.DefaultMathematicaProjectModel.ensureMetadataInitialization(DefaultMathematicaProjectModel.java:316)
+	at com.wolfram.eclipse.MEET.projectmodel.DefaultMathematicaProjectModel.ensureMetadataInitializationAndWait(DefaultMathematicaProjectModel.java:266)
+	at com.wolfram.eclipse.MEET.projectmodel.DefaultMathematicaProjectModel.update(DefaultMathematicaProjectModel.java:648)
+	at com.wolfram.eclipse.MEET.codeindex.CodeIndexerJob.run(CodeIndexerJob.java:169)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.868
+!MESSAGE Ending Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.868
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.931
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.931
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:35:05.931
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 22:37:30.530
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 22:37:41.757
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:42:55.304
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:42:55.304
+!MESSAGE Finished Project Metadata loadCaches
+!SESSION 2018-04-28 22:57:22.793 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 22:57:24.859
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 22:57:25.078
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:28.125
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:28.140
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:30.015
+!MESSAGE Starting Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:30.234
+!MESSAGE Ending Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:33.062
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 22:57:33.594
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 22:57:52.847
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:13:29.820
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-04-28 23:23:43.182 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:45.464
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:45.479
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:45.948
+!MESSAGE Starting Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:46.026
+!MESSAGE Ending Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:47.511
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:23:47.698
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:23:56.075
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2018-04-28 23:25:02.458
+!MESSAGE Unable to load the repository http://download.eclipse.org/tools/gef/update-site/releases/site.xml
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools/gef/update-site/releases/site.xml.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:641)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-04-28 23:25:02.458
+!MESSAGE No repository found at http://download.eclipse.org/tools/gef/update-site/releases/site.xml.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:25:13.405
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2018-04-28 23:25:36.170
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE Software being installed: Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.group 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE Software currently installed: Wolfram Workbench 2.0.126 (com.wolfram.eclipse.ide 2.0.126)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE Eclipse JDT Plug-in Developer Resources 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ (org.eclipse.jdt.source.feature.jar 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.jar 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE From: Wolfram Workbench 2.0.126 (com.wolfram.eclipse.ide 2.0.126)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE To: org.eclipse.sdk.feature.group [3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE From: Eclipse JDT Plug-in Developer Resources 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ (org.eclipse.jdt.source.feature.group 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE To: org.eclipse.jdt.source.feature.jar [3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE From: Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.group 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE To: org.eclipse.jdt.source.feature.jar [3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.170
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE From: Eclipse Project SDK 3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4 (org.eclipse.sdk.feature.group 3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.170
+!MESSAGE To: org.eclipse.jdt.source.feature.group [3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ]
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2018-04-28 23:25:36.249
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE Software being installed: Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.group 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE Software currently installed: Wolfram Workbench 2.0.126 (com.wolfram.eclipse.ide 2.0.126)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE Eclipse JDT Plug-in Developer Resources 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ (org.eclipse.jdt.source.feature.jar 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.jar 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE From: Wolfram Workbench 2.0.126 (com.wolfram.eclipse.ide 2.0.126)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE To: org.eclipse.sdk.feature.group [3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE From: Eclipse JDT Plug-in Developer Resources 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ (org.eclipse.jdt.source.feature.group 3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE To: org.eclipse.jdt.source.feature.jar [3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE From: Eclipse JDT Plug-in Developer Resources 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6 (org.eclipse.jdt.source.feature.group 3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE To: org.eclipse.jdt.source.feature.jar [3.5.2.r352_v20100108-7r88FEwFI0WTuoBl0iaG0tyhfZH6]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2018-04-28 23:25:36.249
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE From: Eclipse Project SDK 3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4 (org.eclipse.sdk.feature.group 3.5.1.R35x_v20090811-7Q7bAIBPVUBVbKSMTyyfpOteKTem7_g2paS1__z-Rrmf4)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2018-04-28 23:25:36.249
+!MESSAGE To: org.eclipse.jdt.source.feature.group [3.5.1.r351_v20090810-0600-7r88FEoFI0WTo6Az-1qFRHm37ChJ]
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:26:40.234
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-04-28 23:32:22.755 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:27.181
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:27.228
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:28.796
+!MESSAGE Starting Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:29.050
+!MESSAGE Ending Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:33.287
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:32:34.202
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:32:40.993
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:33:05.875
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2018-04-28 23:40:02.906 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_05
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:40:06.265
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:40:14.344
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:40:17.125
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:40:17.328
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:22.235
+!MESSAGE Headers: 1.0;com.wolfram.eclipse.MEET.MEETPlugin;antlr,com.wolfram.eclipse.MEET,com.wolfram.eclipse.MEET.actions,com.wolfram.eclipse.MEET.builders,com.wolfram.eclipse.MEET.codeindex,com.wolfram.eclipse.MEET.debug,com.wolfram.eclipse.MEET.editors,com.wolfram.eclipse.MEET.editors.quickassist,com.wolfram.eclipse.MEET.editors.sourcemodel,com.wolfram.eclipse.MEET.editors.sourcemodel.languageelements,com.wolfram.eclipse.MEET.editors.sourcemodel.utils,com.wolfram.eclipse.MEET.editors.sourcemodel.variables,com.wolfram.eclipse.MEET.editors.templates,com.wolfram.eclipse.MEET.frontend,com.wolfram.eclipse.MEET.launch,com.wolfram.eclipse.MEET.launch.tabs,com.wolfram.eclipse.MEET.mathlink,com.wolfram.eclipse.MEET.outline,com.wolfram.eclipse.MEET.preferences,com.wolfram.eclipse.MEET.projectmodel,com.wolfram.eclipse.MEET.projectmodel.problemdetectors,com.wolfram.eclipse.MEET.properties,com.wolfram.eclipse.MEET.resources,com.wolfram.eclipse.MEET.ui,com.wolfram.eclipse.MEET.utilities,com.wolfram.eclipse.MEET.utilities.ant,com.wolfram.eclipse.MEET.wizards, com.wolfram.eclipse.MEET.wizards.export,com.wolfram.eclipse.MEET.wizards.exts,com.wolfram.jlink,com.wolfram.mexpr,com.wolfram.mexpr.formatter,com.wolfram.mexpr.formatter.indenting,com.wolfram.mexpr.language,com.wolfram.mexpr.structural,com.wolfram.mexpr.utilities,com.wolfram.mexpr.visitors, com.wolfram.mexprtools.visitors, com.wolfram.mexprtools.mexprdiff,com.wolfram.mexprparser;dependent;2.0.126;true;Wolfram Workbench Core;MEET.jar,lib/JLink.jar,lib/antlr.jar,lib/mexpr.jar,lib/mexprparser.jar,lib/mexprtools.jar,lib/lucene-core-2.1.0.jar,lib/wolfram-remote-services-client.jar;2;Wolfram Research;com.wolfram.eclipse.MEET.MEETPlugin;com.wolfram.eclipse.MEET;singleton:=true;plugin;org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.core.resources,org.eclipse.jface.text,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclipse.core.resources,org.eclipse.ui.ide,org.eclipse.debug.core,org.eclipse.debug.ui,org.eclipse.ui.console,org.eclipse.core.boot,org.eclipse.core.expressions,org.eclipse.core.runtime.compatibility,org.eclipse.core.variables,org.eclipse.ui.views,org.eclipse.team.core,org.eclipse.ui.cheatsheets,org.eclipse.jdt.ui,org.eclipse.jdt.core,org.eclipse.jdt.launching,org.eclipse.ant.core;
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:22.235
+!MESSAGE Installed at: Sat Apr 28 20:51:34 CDT 2018
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:23.079
+!MESSAGE Starting Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:23.250
+!MESSAGE Ending Metadata Initialization
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:25.110
+!MESSAGE Starting Project Metadata loadCaches
+
+!ENTRY com.wolfram.eclipse.MEET 1 0 2018-04-28 23:40:25.344
+!MESSAGE Finished Project Metadata loadCaches
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:40:33.095
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2018-04-28 23:43:31.797
+!MESSAGE Unable to load the repository http://download.eclipse.org/tools/gef/update-site/releases/site.xml
+!STACK 1
+org.eclipse.equinox.internal.provisional.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools/gef/update-site/releases/site.xml.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:380)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:641)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:88)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableMetadataRepositoryManager.doLoadRepository(QueryableMetadataRepositoryManager.java:55)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadRepository(QueryableRepositoryManager.java:195)
+	at org.eclipse.equinox.internal.provisional.p2.ui.QueryableRepositoryManager.loadAll(QueryableRepositoryManager.java:108)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.run(PreloadingRepositoryHandler.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-04-28 23:43:31.797
+!MESSAGE No repository found at http://download.eclipse.org/tools/gef/update-site/releases/site.xml.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:43:32.109
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2018-04-28 23:43:32.328
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:44:45.375
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2018-04-28 23:45:20.226
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:3865)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:463)
+	at org.eclipse.swt.widgets.Text.setText(Text.java:1951)
+	at com.wolfram.eclipse.MEET.preferences.EditMathematicaInstallationDialog$3.widgetSelected(EditMathematicaInstallationDialog.java:198)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at com.wolfram.eclipse.MEET.preferences.MathematicaInstallationsManagementComponent.editInstallation(MathematicaInstallationsManagementComponent.java:305)
+	at com.wolfram.eclipse.MEET.preferences.MathematicaInstallationsManagementComponent.access$2(MathematicaInstallationsManagementComponent.java:301)
+	at com.wolfram.eclipse.MEET.preferences.MathematicaInstallationsManagementComponent$6.widgetSelected(MathematicaInstallationsManagementComponent.java:270)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceDialog.open(WorkbenchPreferenceDialog.java:211)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:65)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3880)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3473)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-28 23:45:38.992
+!MESSAGE An internal error occurred during: "FrontEnd Job::Open Notebook".
+!STACK 0
+java.lang.UnsatisfiedLinkError: com.wolfram.jlink.NativeLink.MLOpenString(Ljava/lang/String;[Ljava/lang/String;)J
+	at com.wolfram.jlink.NativeLink.MLOpenString(Native Method)
+	at com.wolfram.jlink.NativeLink.<init>(NativeLink.java:113)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink0(MathLinkFactory.java:263)
+	at com.wolfram.jlink.MathLinkFactory.createMathLink(MathLinkFactory.java:190)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink0(MathLinkFactory.java:167)
+	at com.wolfram.jlink.MathLinkFactory.createKernelLink(MathLinkFactory.java:65)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.<init>(MathLinkInitializer.java:23)
+	at com.wolfram.eclipse.MEET.mathlink.MathLinkInitializer.initMathLink(MathLinkInitializer.java:46)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.connectToFrontEnd(FrontEndLink.java:562)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink.openNotebookImpl(FrontEndLink.java:817)
+	at com.wolfram.eclipse.MEET.mathlink.FrontEndLink$NotebookQueueElement.run(FrontEndLink.java:1194)
+	at com.wolfram.eclipse.MEET.utilities.JobQueue$Worker.run(JobQueue.java:104)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

@@ -1,0 +1,382 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     10296,        373]
+NotebookOptionsPosition[      7569,        277]
+NotebookOutlinePosition[      7992,        293]
+CellTagsIndexPosition[      7949,        290]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellChangeTimes->{3.410894606249012*^9},
+ CellID->6298],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["NumericalAnalysis", "Categorization",
+ CellChangeTimes->{{3.410888631979097*^9, 3.4108886398616886`*^9}, {
+  3.4108896172604647`*^9, 3.41088961873242*^9}},
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["NumericalAnalysis`", "Categorization",
+ CellChangeTimes->{{3.410888643096857*^9, 3.4108886502482805`*^9}},
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["NumericalAnalysis/guide/NumericalAnalysisPackage", "Categorization",
+ CellChangeTimes->{{3.410888656057561*^9, 3.410888667776281*^9}, {
+  3.41088907595706*^9, 3.410889087757671*^9}},
+ CellLabel->"URI",
+ CellID->31593272]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553],
+
+Cell["XXXX", "Synonyms",
+ CellID->1251652828]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
+
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Numerical Analysis Package", "GuideTitle",
+ CellChangeTimes->{{3.36793376812776*^9, 3.36793377173715*^9}, {
+  3.3938484413819356`*^9, 3.3938484440301104`*^9}},
+ CellID->942062912],
+
+Cell[TextData[{
+ "The built\[Hyphen]in functions ",
+ Cell[BoxData[
+  ButtonBox["D",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["Limit",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Series",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " perform computations using symbolic and analytic methods. The functions ",
+ Cell[BoxData[
+  ButtonBox["ND",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/ND"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["NLimit",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NLimit"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["NResidue",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NResidue"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["NSeries",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NSeries"]], "InlineFormula"],
+ ", in this package, are the numerical versions of these functions",
+ "."
+}], "GuideAbstract",
+ CellChangeTimes->{{3.3683613778011*^9, 3.36836159299273*^9}, {
+   3.371401237798204*^9, 3.371401390723524*^9}, {3.37510431837531*^9, 
+   3.375104363635188*^9}, {3.37521041270959*^9, 3.375210444675766*^9}, 
+   3.3798033879407587`*^9},
+ CellID->2001916300],
+
+Cell[TextData[ButtonBox["Introductory Tutorial",
+ BaseStyle->"GuideMainTutorial"]], "GuideMainTutorial",
+ CellID->1580956551],
+
+Cell[TextData[ButtonBox["Test Drive",
+ BaseStyle->"GuideTestDrive"]], "GuideTestDrive",
+ CellID->321588326]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->1866139230],
+
+Cell[CellGroupData[{
+
+Cell["Limits and Derivatives", "GuideFunctionsSubsection",
+ CellChangeTimes->{{3.36793377965908*^9, 3.3679337825341*^9}},
+ CellID->173109221],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NumLimit",
+   BaseStyle->"Link",
+   ButtonData:>"paclet:NumericalAnalysis/ref/NumLimit"]], 
+  "InlineGuideFunction"],
+ " \[LongDash] numerical limit of a function"
+}], "GuideText",
+ CellChangeTimes->{{3.36793378554974*^9, 3.367933786331*^9}, {
+  3.3679339389726*^9, 3.3679339433945*^9}, {3.36793408792665*^9, 
+  3.36793408794227*^9}, {3.36819251524642*^9, 3.36819251684009*^9}, {
+  3.4146963757616315`*^9, 3.4146963760429354`*^9}},
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NumD",
+   BaseStyle->"Link",
+   ButtonData:>"paclet:NumericalAnalysis/ref/NumD"]], "InlineGuideFunction"],
+ " \[LongDash] numerical derivative of a function at a point"
+}], "GuideText",
+ CellChangeTimes->{{3.36793378856539*^9, 3.36793378870601*^9}, {
+  3.3679339508633*^9, 3.36793396784778*^9}, {3.36793409030157*^9, 
+  3.36793409031719*^9}},
+ CellID->1463276848]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiter",
+ CellID->195981991],
+
+Cell[CellGroupData[{
+
+Cell["Summations and Series", "GuideFunctionsSubsection",
+ CellChangeTimes->{{3.36793380553425*^9, 3.36793381639369*^9}},
+ CellID->137740830],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NumSeries",
+   BaseStyle->"Link",
+   ButtonData:>"paclet:NumericalAnalysis/ref/NumSeries"]], 
+  "InlineGuideFunction"],
+ " \[LongDash] numerical series expansion of a function"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+  3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+  3.36793409450456*^9}},
+ CellID->547646493]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->195090415],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NumResidue",
+   BaseStyle->"Link",
+   ButtonData:>"paclet:NumericalAnalysis/ref/NumResidue"]], 
+  "InlineGuideFunction"],
+ " \[LongDash] numerical residue of an expression near a specified point"
+}], "GuideText",
+ CellChangeTimes->{{3.36793385011266*^9, 3.36793385225329*^9}, {
+  3.36793404294201*^9, 3.36793406172338*^9}, {3.36793409670762*^9, 
+  3.36793409672324*^9}},
+ CellID->182913984]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "GuideTutorialsSection",
+ CellChangeTimes->{3.381931905408058*^9},
+ CellID->415694126],
+
+Cell[TextData[ButtonBox["Numerical Analysis Package",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:NumericalAnalysis/tutorial/NumericalAnalysis"]], "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}},
+ CellID->846728239]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "GuideMoreAboutSection",
+ CellChangeTimes->{3.381931902376769*^9},
+ CellID->23220180],
+
+Cell[TextData[ButtonBox["Numerical Evaluation & Precision",
+ BaseStyle->"Link",
+ ButtonData:>
+  "paclet:guide/NumericalEvaluationAndPrecision"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.36827561369415*^9, 3.36827561820986*^9}, {
+  3.36827569482071*^9, 3.36827569485196*^9}},
+ CellID->1567025153],
+
+Cell[TextData[ButtonBox["Numerical Functions",
+ BaseStyle->"Link",
+ ButtonData:>"paclet:guide/NumericalFunctions"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.368275631882*^9, 3.36827563535081*^9}, {
+  3.36827570227397*^9, 3.3682757022896*^9}},
+ CellID->252299663]
+}, Open  ]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->415694148]
+},
+WindowSize->{719, 673},
+WindowMargins->{{33, Automatic}, {Automatic, -6}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (January 24, 2008)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 359, 15, 22, "History",
+ CellID->6298],
+Cell[CellGroupData[{
+Cell[952, 40, 68, 1, 27, "CategorizationSection",
+ CellID->1122911449],
+Cell[1023, 43, 78, 2, 31, "Categorization",
+ CellID->686433507],
+Cell[1104, 47, 208, 4, 31, "Categorization",
+ CellID->605800465],
+Cell[1315, 53, 155, 3, 31, "Categorization",
+ CellID->468444828],
+Cell[1473, 58, 226, 4, 31, "Categorization",
+ CellID->31593272]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1736, 67, 56, 1, 17, "SynonymsSection",
+ CellID->1427418553],
+Cell[1795, 70, 45, 1, 70, "Synonyms",
+ CellID->1251652828]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1877, 76, 56, 1, 17, "KeywordsSection",
+ CellID->1427428552],
+Cell[1936, 79, 45, 1, 17, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2018, 85, 33, 0, 17, "DetailsSection"],
+Cell[2054, 87, 49, 1, 70, "Details"],
+Cell[2106, 90, 47, 1, 70, "Details"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2190, 96, 185, 3, 76, "GuideTitle",
+ CellID->942062912],
+Cell[2378, 101, 1369, 44, 57, "GuideAbstract",
+ CellID->2001916300],
+Cell[3750, 147, 125, 2, 19, "GuideMainTutorial",
+ CellID->1580956551],
+Cell[3878, 151, 107, 2, 19, "GuideTestDrive",
+ CellID->321588326]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4022, 158, 54, 1, 68, "GuideFunctionsSection",
+ CellID->1866139230],
+Cell[CellGroupData[{
+Cell[4101, 163, 141, 2, 33, "GuideFunctionsSubsection",
+ CellID->173109221],
+Cell[4245, 167, 495, 12, 23, "GuideText",
+ CellID->203374175],
+Cell[4743, 181, 407, 10, 23, "GuideText",
+ CellID->1463276848]
+}, Open  ]],
+Cell[5165, 194, 48, 1, 26, "GuideDelimiter",
+ CellID->195981991],
+Cell[CellGroupData[{
+Cell[5238, 199, 141, 2, 33, "GuideFunctionsSubsection",
+ CellID->137740830],
+Cell[5382, 203, 415, 11, 23, "GuideText",
+ CellID->547646493]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5834, 219, 48, 1, 26, "GuideDelimiter",
+ CellID->195090415],
+Cell[5885, 222, 434, 11, 23, "GuideText",
+ CellID->182913984]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6368, 239, 104, 2, 70, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[6475, 243, 302, 6, 20, "GuideTutorial",
+ CellID->846728239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6814, 254, 104, 2, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[6921, 258, 295, 6, 20, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[7219, 266, 262, 5, 20, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[7496, 274, 69, 1, 70, "GuideRelatedLinksSection",
+ CellID->415694148]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,44 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[       812,         35]
+NotebookOptionsPosition[       571,         22]
+NotebookOutlinePosition[       939,         38]
+CellTagsIndexPosition[       896,         35]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+},
+WindowSize->{441, 409},
+WindowMargins->{{386, Automatic}, {Automatic, 243}},
+ShowSelection->True,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (November 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+}
+]
+*)
+
+(* End of internal cache information *)
