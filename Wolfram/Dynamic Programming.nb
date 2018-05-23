@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     85147,       1642]
-NotebookOptionsPosition[     83608,       1584]
-NotebookOutlinePosition[     83957,       1599]
-CellTagsIndexPosition[     83914,       1596]
+NotebookDataLength[    101365,       2023]
+NotebookOptionsPosition[     99625,       1958]
+NotebookOutlinePosition[     99974,       1973]
+CellTagsIndexPosition[     99931,       1970]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1572,18 +1572,392 @@ Cell[BoxData[{
   3.7348261641295276`*^9, 3.734826187005376*^9}}],
 
 Cell[BoxData["55"], "Output",
- CellChangeTimes->{3.7348256040651665`*^9, 3.7348261880210304`*^9}],
+ CellChangeTimes->{3.7348256040651665`*^9, 3.7348261880210304`*^9, 
+  3.734908049380618*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"10", ",", 
    RowBox[{"-", "5"}], ",", "40", ",", "10"}], "}"}]], "Output",
- CellChangeTimes->{3.7348256040651665`*^9, 3.734826188036668*^9}]
+ CellChangeTimes->{3.7348256040651665`*^9, 3.7348261880210304`*^9, 
+  3.7349080493962436`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["River Crossing Puzzle", "Subsection",
+ CellChangeTimes->{{3.7352549378361254`*^9, 3.735254943226973*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"allowedState", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<Hay\>\"", ",", "\"\<Wolf\>\""}], "}"}], ",", 
+     RowBox[{"{", "\"\<Hay\>\"", "}"}], ",", 
+     RowBox[{"{", "\"\<Wolf\>\"", "}"}], ",", 
+     RowBox[{"{", "\"\<Goat\>\"", "}"}], ",", 
+     RowBox[{"{", "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"stateTranList", "[", 
+   RowBox[{"{", 
+    RowBox[{"t1_List", ",", "t2_List"}], "}"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t", ",", "t3"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"t", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Complement", "[", 
+          RowBox[{"t1", ",", 
+           RowBox[{"{", "\"\<Farmer\>\"", "}"}]}], "]"}], "//", 
+         RowBox[{
+          RowBox[{"Tuples", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "\"\<Farmer\>\"", "}"}], ",", "#"}], "}"}], "]"}], 
+          "&"}]}], "//", 
+        RowBox[{
+         RowBox[{"Append", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", "\"\<Farmer\>\"", "}"}]}], "]"}], "&"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"t3", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Sort", "@", 
+            RowBox[{"Complement", "[", 
+             RowBox[{"t1", ",", "#"}], "]"}]}], ",", 
+           RowBox[{"Sort", "@", 
+            RowBox[{"Flatten", "@", 
+             RowBox[{"Append", "[", 
+              RowBox[{"t2", ",", "#"}], "]"}]}]}]}], "}"}], "&"}], "/@", 
+        "t"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Select", "[", 
+       RowBox[{"t3", ",", 
+        RowBox[{
+         RowBox[{"MemberQ", "[", 
+          RowBox[{"allowedState", ",", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "/;", 
+   RowBox[{"MemberQ", "[", 
+    RowBox[{"t1", ",", "\"\<Farmer\>\""}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"stateTranList", "[", 
+   RowBox[{"{", 
+    RowBox[{"t1_List", ",", "t2_List"}], "}"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Reverse", "/@", 
+    RowBox[{"stateTranList", "[", 
+     RowBox[{"{", 
+      RowBox[{"t2", ",", "t1"}], "}"}], "]"}]}], "/;", 
+   RowBox[{"MemberQ", "[", 
+    RowBox[{"t2", ",", "\"\<Farmer\>\""}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"stateTranString", "[", "t_String", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t1", ",", "t2"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"t1", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"ToString", ",", 
+          RowBox[{"ToExpression", "[", "t", "]"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"t2", "=", 
+        RowBox[{"stateTranList", "[", "t1", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ToString", "/@", "t2"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"define", " ", "the", " ", "initial", " ", "state"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"t1", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Farmer\>\"", ",", "\"\<Goat\>\"", ",", "\"\<Hay\>\"", ",", 
+      "\"\<Wolf\>\""}], "}"}]}], ";", 
+   RowBox[{"t2", "=", 
+    RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"test", " ", "state", " ", "transition"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"stateTranString", "[", 
+    RowBox[{"MapAll", "[", 
+     RowBox[{"ToString", ",", 
+      RowBox[{"{", 
+       RowBox[{"t1", ",", "t2"}], "}"}]}], "]"}], "]"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"stateTranString", "[", 
+    RowBox[{"MapAll", "[", 
+     RowBox[{"ToString", ",", 
+      RowBox[{"{", 
+       RowBox[{"t2", ",", "t1"}], "}"}]}], "]"}], "]"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"state", " ", "transition", " ", "diagram"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"MapAll", "[", 
+    RowBox[{"ToString", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Sort", "@", "t1"}], ",", 
+       RowBox[{"Sort", "@", "t2"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Thread", "[", 
+         RowBox[{"#", "\[UndirectedEdge]", 
+          RowBox[{"stateTranString", "[", "#", "]"}]}], "]"}], "&"}], "/@", 
+       RowBox[{"(", 
+        RowBox[{"Last", "/@", "#"}], ")"}]}], "]"}], "&"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\>\"", "\[UndirectedEdge]", "t"}], "}"}], ",", "7"}], "]"}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Flatten", "[", 
+    RowBox[{"%", ",", "1"}], "]"}], "//", "DeleteDuplicates"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graph", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}], ",", 
+   RowBox[{"GraphLayout", "\[Rule]", "\"\<CircularEmbedding\>\""}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7352549598213034`*^9, 3.7352549744624844`*^9}, {
+   3.7352550933574085`*^9, 3.7352550945137014`*^9}, {3.7352553402570086`*^9, 
+   3.7352553409132795`*^9}, {3.735515152796318*^9, 3.7355153022715473`*^9}, {
+   3.735515365920862*^9, 3.735515368920965*^9}, {3.7355154185398183`*^9, 
+   3.7355154190554857`*^9}, {3.7355156007399035`*^9, 
+   3.7355156201380653`*^9}, {3.7355156677058973`*^9, 3.735515705773254*^9}, {
+   3.735516743335961*^9, 3.7355167747510176`*^9}, {3.735775054284735*^9, 
+   3.7357750659922457`*^9}, {3.7357764602977343`*^9, 3.735776460908486*^9}, {
+   3.7357768502043505`*^9, 3.7357768532717724`*^9}, {3.7357773797133055`*^9, 
+   3.735777501812467*^9}, {3.735777559147526*^9, 3.7357775599126577`*^9}, {
+   3.7359455223462973`*^9, 3.7359455566756687`*^9}, {3.735945964610258*^9, 
+   3.7359459720906734`*^9}, {3.735946209518092*^9, 3.7359462310427685`*^9}, 
+   3.735946956006714*^9, 3.7360333357106247`*^9, {3.7360334289416375`*^9, 
+   3.736033431957363*^9}, {3.7360345031028786`*^9, 3.736034503555705*^9}, {
+   3.736034538264076*^9, 3.736034552916074*^9}, {3.7360354576484504`*^9, 
+   3.7360354687539153`*^9}, 3.7360369682161217`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+      "", "{{Farmer, Goat, Hay, Wolf}, {}}", "{{Hay, Wolf}, {Farmer, Goat}}", 
+       "{{Farmer, Hay, Wolf}, {Goat}}", "{{Wolf}, {Farmer, Goat, Hay}}", 
+       "{{Hay}, {Farmer, Goat, Wolf}}", "{{Farmer, Goat, Wolf}, {Hay}}", 
+       "{{Farmer, Goat, Hay}, {Wolf}}", "{{Goat}, {Farmer, Hay, Wolf}}", 
+       "{{Farmer, Goat}, {Hay, Wolf}}", "{{}, {Farmer, Goat, Hay, Wolf}}"}, {
+      Null, {{1, 2}, {2, 3}, {3, 2}, {3, 4}, {4, 5}, {4, 6}, {4, 3}, {5, 7}, {
+       5, 4}, {6, 8}, {6, 4}, {7, 5}, {7, 9}, {8, 6}, {8, 9}, {9, 8}, {9, 
+       7}, {9, 10}, {10, 11}, {10, 9}}}, {
+      GraphLayout -> "CircularEmbedding", VertexLabels -> {"Name"}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+        {Arrowheads[0.], 
+         ArrowBox[{{-0.5406408174555982, 
+          0.8412535328311816}, {-0.9096319953545187, 0.4154150130018871}}, 
+          0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{-0.9096319953545187, 
+          0.4154150130018871}, {-0.8580132051477078, 
+          0.12336367486136018`}, {-0.9898214418809327, \
+-0.14231483827328406`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{-0.9096319953545187, 
+          0.4154150130018871}, {-1.0414402320877425`, 
+          0.14973649986722895`}, {-0.9898214418809327, \
+-0.14231483827328406`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.9898214418809327, -0.14231483827328406`}, \
+{-0.7885020780676515, -0.3600968333183709}, {-0.7557495743542579, \
+-0.6548607339452843}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.9898214418809327, -0.14231483827328406`}, \
+{-0.9570689381675376, -0.4370787388998445}, {-0.7557495743542579, \
+-0.6548607339452843}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.7557495743542579, -0.6548607339452843}, \
+{-0.468647112490568, -0.7292291412430925}, {-0.28173255684142917`, \
+-0.9594929736144971}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.7557495743542579, -0.6548607339452843}, \
+{-0.568835018705116, -0.8851245663180269}, {-0.28173255684142917`, \
+-0.9594929736144971}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.7557495743542579, -0.6548607339452843}, \
+{-0.18691455564914253`, -0.6365725169368869}, {
+          0.28173255684143034`, -0.9594929736144975}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.7557495743542579, -0.6548607339452843}, \
+{-0.2871024618636845, -0.9777811906227832}, {
+          0.28173255684143034`, -0.9594929736144975}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.28173255684142917`, -0.9594929736144971}, {
+          0.18691455564914564`, -0.6365725169367856}, {
+          0.7557495743542585, -0.6548607339452855}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[
+          BezierCurveBox[{{-0.28173255684142917`, -0.9594929736144971}, {
+          0.28710246186368765`, -0.9777811906228076}, {
+          0.7557495743542585, -0.6548607339452855}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{
+          0.28173255684143034`, -0.9594929736144975}, {
+          0.5013996162039679, -0.4344652406159328}, {
+          0.9898214418809328, -0.14231483827328617`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{
+          0.28173255684143034`, -0.9594929736144975}, {
+          0.770154382518396, -0.6673425712716808}, {
+          0.9898214418809328, -0.14231483827328617`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{0.7557495743542585, -0.6548607339452855}, {
+          0.6566938413344262, -0.09441832018409801}, {0.9096319953545181, 
+          0.41541501300188516`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{0.7557495743542585, -0.6548607339452855}, {
+          1.0086877283743476`, -0.14502740075944234`}, {0.9096319953545181, 
+          0.41541501300188516`}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{
+          0.9898214418809328, -0.14231483827328617`}, {0.8580132051477087, 
+          0.12336367486132567`}, {0.9096319953545181, 0.41541501300188516`}}],
+           0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{
+          0.9898214418809328, -0.14231483827328617`}, {1.0414402320877445`, 
+          0.14973649986722434`}, {0.9096319953545181, 0.41541501300188516`}}],
+           0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{0.9096319953545181, 
+          0.41541501300188516`}, {0.6551112020249773, 0.5676570879185212}, {
+          0.5406408174555974, 0.8412535328311802}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[BezierCurveBox[{{0.9096319953545181, 
+          0.41541501300188516`}, {0.7951616107851407, 0.6890114579139006}, {
+          0.5406408174555974, 0.8412535328311802}}], 0.02244607451670738]}, 
+        {Arrowheads[0.], 
+         ArrowBox[{{0.5406408174555974, 
+          0.8412535328311802}, {-7.044813998280222*^-16, 1.}}, 
+          0.02244607451670738]}}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {
+         DiskBox[{-0.5406408174555982, 0.8412535328311816}, 
+          0.02244607451670738], 
+         InsetBox["\<\"\"\>", 
+          Offset[{2, 2}, {-0.5181947429388909, 0.8636996073478891}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9096319953545187, 0.4154150130018871}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Farmer, Goat, Hay, Wolf}, {}}\"\>", 
+          Offset[{2, 2}, {-0.8871859208378112, 0.4378610875185945}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9898214418809327, -0.14231483827328406`}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Hay, Wolf}, {Farmer, Goat}}\"\>", 
+          Offset[{2, 2}, {-0.9673753673642254, -0.11986876375657668`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.7557495743542579, -0.6548607339452843}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Farmer, Hay, Wolf}, {Goat}}\"\>", 
+          Offset[{2, 2}, {-0.7333034998375505, -0.6324146594285769}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.28173255684142917`, -0.9594929736144971}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Wolf}, {Farmer, Goat, Hay}}\"\>", 
+          Offset[{2, 2}, {-0.2592864823247218, -0.9370468990977898}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.28173255684143034`, -0.9594929736144975}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Hay}, {Farmer, Goat, Wolf}}\"\>", 
+          Offset[{2, 2}, {0.3041786313581377, -0.93704689909779}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.7557495743542585, -0.6548607339452855}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Farmer, Goat, Wolf}, {Hay}}\"\>", 
+          Offset[{2, 2}, {0.7781956488709658, -0.6324146594285782}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9898214418809328, -0.14231483827328617`}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Farmer, Goat, Hay}, {Wolf}}\"\>", 
+          Offset[{2, 2}, {1.0122675163976402`, -0.11986876375657879`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9096319953545181, 0.41541501300188516`}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Goat}, {Farmer, Hay, Wolf}}\"\>", 
+          Offset[{2, 2}, {0.9320780698712254, 0.43786108751859254`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5406408174555974, 0.8412535328311802}, 
+          0.02244607451670738], 
+         InsetBox["\<\"{{Farmer, Goat}, {Hay, Wolf}}\"\>", 
+          Offset[{2, 2}, {0.5630868919723049, 0.8636996073478875}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-7.044813998280222*^-16, 1.}, 0.02244607451670738], 
+         InsetBox["\<\"{{}, {Farmer, Goat, Hay, Wolf}}\"\>", 
+          Offset[{2, 2}, {0.022446074516706677`, 1.0224460745167074`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{562., Automatic}]], "Output",
+ CellChangeTimes->{3.7360369699735765`*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{775, 561},
-WindowMargins->{{287, Automatic}, {Automatic, 54}},
+WindowSize->{1328, 561},
+WindowMargins->{{Automatic, -6}, {Automatic, 34}},
 FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"ReverseColor.nb"
 ]
@@ -1604,14 +1978,14 @@ Cell[688, 25, 4007, 89, 272, "Input"],
 Cell[CellGroupData[{
 Cell[4720, 118, 131, 1, 34, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[4876, 123, 845, 24, 52, "Input"],
+Cell[4876, 123, 845, 24, 31, "Input"],
 Cell[5724, 149, 3073, 90, 196, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[8846, 245, 269, 5, 57, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[9140, 254, 5946, 178, 352, "Input"],
+Cell[9140, 254, 5946, 178, 252, "Input"],
 Cell[15089, 434, 60111, 896, 322, "Output"],
 Cell[75203, 1332, 1076, 24, 42, "Output"]
 }, Open  ]]
@@ -1639,9 +2013,16 @@ Cell[80648, 1496, 230, 3, 43, "Subsection"],
 Cell[CellGroupData[{
 Cell[80903, 1503, 117, 1, 35, "Subsection"],
 Cell[CellGroupData[{
-Cell[81045, 1508, 2251, 63, 272, "Input"],
-Cell[83299, 1573, 97, 1, 31, "Output"],
-Cell[83399, 1576, 181, 4, 64, "Output"]
+Cell[81045, 1508, 2251, 63, 232, "Input"],
+Cell[83299, 1573, 122, 2, 31, "Output"],
+Cell[83424, 1577, 210, 5, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83683, 1588, 111, 1, 43, "Subsection"],
+Cell[CellGroupData[{
+Cell[83819, 1593, 6616, 175, 472, "Input"],
+Cell[90438, 1770, 9159, 184, 477, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
