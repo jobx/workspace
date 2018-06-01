@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    101365,       2023]
-NotebookOptionsPosition[     99625,       1958]
-NotebookOutlinePosition[     99974,       1973]
-CellTagsIndexPosition[     99931,       1970]
+NotebookDataLength[    119195,       2465]
+NotebookOptionsPosition[    117332,       2396]
+NotebookOutlinePosition[    117681,       2411]
+CellTagsIndexPosition[    117638,       2408]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1953,11 +1953,449 @@ Cell[BoxData[
   FrameTicks->None,
   ImageSize->{562., Automatic}]], "Output",
  CellChangeTimes->{3.7360369699735765`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"create", " ", "all", " ", "states"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<Farmer\>\"", ",", "\"\<Wolf\>\"", ",", "\"\<Goat\>\"", ",", 
+     "\"\<Hay\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"HoldForm", "@", "Nothing"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "4"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t1", "=", 
+   RowBox[{
+    RowBox[{"Sort", "/@", 
+     RowBox[{"Tuples", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"s1", ",", "s2"}], "}"}], "]"}], "]"}]}], "//", 
+    "ReleaseHold"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Complement", "[", 
+      RowBox[{"s1", ",", "#"}], "]"}], "&"}], "/@", "%"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"unfilteredStates", "=", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"List", "[", 
+      RowBox[{"t1", ",", "t2"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"forbidden", " ", "state"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fsHelper", "[", "s_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"MemberQ", "[", 
+       RowBox[{"s", ",", "\"\<Wolf\>\""}], "]"}], "\[And]", 
+      RowBox[{"MemberQ", "[", 
+       RowBox[{"s", ",", "\"\<Goat\>\""}], "]"}], "\[And]", 
+      RowBox[{"\[Not]", 
+       RowBox[{"MemberQ", "[", 
+        RowBox[{"s", ",", "\"\<Farmer\>\""}], "]"}]}]}], ")"}], " ", "\[Or]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"MemberQ", "[", 
+       RowBox[{"s", ",", "\"\<Hay\>\""}], "]"}], "\[And]", 
+      RowBox[{"MemberQ", "[", 
+       RowBox[{"s", ",", "\"\<Goat\>\""}], "]"}], "\[And]", 
+      RowBox[{"\[Not]", 
+       RowBox[{"MemberQ", "[", 
+        RowBox[{"s", ",", "\"\<Farmer\>\""}], "]"}]}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fs", "[", 
+    RowBox[{"{", 
+     RowBox[{"s1_", ",", "s2_"}], "}"}], "]"}], ":=", 
+   RowBox[{"\[Not]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"fsHelper", "[", "s1", "]"}], "\[Or]", 
+      RowBox[{"fsHelper", "[", "s2", "]"}]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"filteredStates", "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"unfilteredStates", ",", "fs"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"s1", " ", "-", " ", "t1"}], " ", "=", " ", 
+    RowBox[{"t2", " ", "-", " ", "s2"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tran", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"s1_", ",", "s2_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t1_", ",", "t2_"}], "}"}]}], "}"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "T", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"T", "=", 
+        RowBox[{"Complement", "[", 
+         RowBox[{"s1", ",", "t1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Complement", "[", 
+          RowBox[{"s1", ",", "t1"}], "]"}], "\[Equal]", 
+         RowBox[{"Complement", "[", 
+          RowBox[{"t2", ",", "s2"}], "]"}]}], "\[And]", "\[IndentingNewLine]", 
+        RowBox[{"1", "\[LessEqual]", 
+         RowBox[{"Length", "[", 
+          RowBox[{"Complement", "[", 
+           RowBox[{"s1", ",", "t1"}], "]"}], "]"}], "\[LessEqual]", "2"}], 
+        "\[And]", "\[IndentingNewLine]", 
+        RowBox[{"MemberQ", "[", 
+         RowBox[{"T", ",", "\"\<Farmer\>\""}], "]"}], "\[And]", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Intersection", "[", 
+          RowBox[{"s1", ",", "t1"}], "]"}], "\[Equal]", "t1"}], "\[And]", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Intersection", "[", 
+          RowBox[{"s2", ",", "t2"}], "]"}], "\[Equal]", "s2"}]}]}]}], 
+     "\[IndentingNewLine]", "]"}], "/;", 
+    RowBox[{
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"s1", ",", "\"\<Farmer\>\""}], "]"}], "\[And]", 
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"t2", ",", "\"\<Farmer\>\""}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tran", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"s1_", ",", "s2_"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t1_", ",", "t2_"}], "}"}]}], "}"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"tran", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"s2", ",", "s1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t2", ",", "t1"}], "}"}]}], "}"}], "]"}], "/;", 
+    RowBox[{
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"s2", ",", "\"\<Farmer\>\""}], "]"}], "\[And]", 
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"t1", ",", "\"\<Farmer\>\""}], "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tran", "[", "__", "]"}], ":=", "False"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Subsets", "[", 
+      RowBox[{"filteredStates", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", "tran"}], "]"}], "/.", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}], "\[Rule]", 
+    RowBox[{"(", 
+     RowBox[{"x", "\[UndirectedEdge]", "y"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "=", 
+    RowBox[{"Graph", "[", 
+     RowBox[{"%", ",", 
+      RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}], ",", 
+      RowBox[{"GraphLayout", "\[Rule]", "\"\<CircularEmbedding\>\""}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"find", " ", "path"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"HighlightGraph", "[", 
+   RowBox[{"g", ",", 
+    RowBox[{"PathGraph", "[", 
+     RowBox[{"FindShortestPath", "[", 
+      RowBox[{"g", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<Farmer\>\"", ",", "\"\<Goat\>\"", ",", "\"\<Hay\>\"", ",", 
+           "\"\<Wolf\>\""}], "}"}], ",", 
+         RowBox[{"{", "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<Farmer\>\"", ",", "\"\<Goat\>\"", ",", "\"\<Hay\>\"", ",", 
+           "\"\<Wolf\>\""}], "}"}]}], "}"}]}], "]"}], "]"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7366361844588437`*^9, 3.7366362230065107`*^9}, {
+   3.7366362624121795`*^9, 3.7366363271990924`*^9}, {3.7366363661991606`*^9, 
+   3.7366364286304693`*^9}, {3.7366364614997263`*^9, 
+   3.7366364634809303`*^9}, {3.736636548844279*^9, 3.7366365962683616`*^9}, {
+   3.7366368036239233`*^9, 3.73663685916002*^9}, {3.7366369064905024`*^9, 
+   3.736636950404579*^9}, {3.7366369811054325`*^9, 3.736636992789853*^9}, {
+   3.736638244847083*^9, 3.7366382617121077`*^9}, {3.7366385990716076`*^9, 
+   3.736638631558654*^9}, {3.7366386735697155`*^9, 3.736638677099721*^9}, {
+   3.7367276078126583`*^9, 3.736727702060049*^9}, {3.736727798316555*^9, 
+   3.736727871825759*^9}, {3.736727902141493*^9, 3.7367279418197627`*^9}, {
+   3.7367279831991296`*^9, 3.736728009796651*^9}, {3.736728060699562*^9, 
+   3.7367280654578342`*^9}, {3.7367281874048367`*^9, 3.736728198524472*^9}, {
+   3.736728243750059*^9, 3.7367282473392644`*^9}, {3.7368094967224474`*^9, 
+   3.7368094989220514`*^9}, 3.7368095949090185`*^9, {3.7368114404747252`*^9, 
+   3.7368114516131444`*^9}, 3.7368121478415008`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{{{"Farmer", "Goat", "Hay", "Wolf"}, {}}, {{"Hay", "Wolf"}, {
+        "Farmer", "Goat"}}, {{"Farmer", "Goat", "Wolf"}, {"Hay"}}, {{
+        "Wolf"}, {"Farmer", "Goat", "Hay"}}, {{"Goat"}, {
+        "Farmer", "Hay", "Wolf"}}, {{"Farmer", "Hay", "Wolf"}, {"Goat"}}, {{
+        "Hay"}, {"Farmer", "Goat", "Wolf"}}, {{"Farmer", "Goat", "Hay"}, {
+        "Wolf"}}, {{"Farmer", "Goat"}, {"Hay", "Wolf"}}, {{}, {
+        "Farmer", "Goat", "Hay", "Wolf"}}}, {
+      Null, {{1, 2}, {3, 4}, {3, 5}, {6, 2}, {6, 4}, {6, 7}, {8, 5}, {8, 7}, {
+       9, 5}, {9, 10}}}, {GraphHighlight -> {
+         UndirectedEdge[{{"Farmer", "Goat"}, {"Hay", "Wolf"}}, {{}, {
+           "Farmer", "Goat", "Hay", "Wolf"}}], 
+         UndirectedEdge[{{"Farmer", "Hay", "Wolf"}, {"Goat"}}, {{"Wolf"}, {
+           "Farmer", "Goat", "Hay"}}], 
+         UndirectedEdge[{{"Hay", "Wolf"}, {"Farmer", "Goat"}}, {{
+           "Farmer", "Hay", "Wolf"}, {"Goat"}}], 
+         UndirectedEdge[{{"Wolf"}, {"Farmer", "Goat", "Hay"}}, {{
+           "Farmer", "Goat", "Wolf"}, {"Hay"}}], 
+         UndirectedEdge[{{"Goat"}, {"Farmer", "Hay", "Wolf"}}, {{
+           "Farmer", "Goat"}, {"Hay", "Wolf"}}], 
+         UndirectedEdge[{{"Farmer", "Goat", "Hay", "Wolf"}, {}}, {{
+           "Hay", "Wolf"}, {"Farmer", "Goat"}}], 
+         UndirectedEdge[{{"Farmer", "Goat", "Wolf"}, {"Hay"}}, {{"Goat"}, {
+           "Farmer", "Hay", "Wolf"}}]}, GraphLayout -> "CircularEmbedding", 
+       VertexLabels -> {"Name"}}]]}, 
+    TagBox[GraphicsGroupBox[{
+       {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{-0.5877852522924737, 
+           0.809016994374948}, {-0.9510565162951538, 0.3090169943749484}}, 
+           0.02261146496815286]}}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{-0.9510565162951538, 0.3090169943749484}, {
+           0.5877852522924738, -0.8090169943749481}}, 0.02261146496815286]}}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{-0.9510565162951534, -0.30901699437494645`}, \
+{-0.5877852522924726, -0.8090169943749468}}, 0.02261146496815286]}}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{-0.9510565162951534, -0.30901699437494645`}, {
+           6.049014748177263*^-16, -1.}}, 0.02261146496815286]}}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{-0.5877852522924726, -0.8090169943749468}, {
+           0.5877852522924738, -0.8090169943749481}}, 0.02261146496815286]}}, 
+        {Arrowheads[0.], 
+         ArrowBox[{{6.049014748177263*^-16, -1.}, {0.9510565162951533, 
+          0.30901699437494634`}}, 0.02261146496815286]}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{6.049014748177263*^-16, -1.}, {0.5877852522924726, 
+           0.8090169943749468}}, 0.02261146496815286]}}, 
+        {Arrowheads[0.], 
+         ArrowBox[{{0.5877852522924738, -0.8090169943749481}, {
+          0.9510565162951539, -0.3090169943749485}}, 0.02261146496815286]}, 
+        {Arrowheads[0.], 
+         ArrowBox[{{0.9510565162951539, -0.3090169943749485}, {
+          0.9510565162951533, 0.30901699437494634`}}, 0.02261146496815286]}, 
+        {Hue[1, 1, 0.7], Opacity[1], 
+         {Arrowheads[0.], 
+          ArrowBox[{{0.5877852522924726, 
+           0.8090169943749468}, {-7.044813998280222*^-16, 1.}}, 
+           0.02261146496815286]}}}, 
+       {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+        0.7]}], {
+         DiskBox[{-0.5877852522924737, 0.809016994374948}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Hay\"\>", ",", "\<\"Wolf\"\>"}], "}"}], ",", 
+            RowBox[{"{", "}"}]}], "}"}], 
+          Offset[{2, 2}, {-0.5651737873243208, 0.8316284593431009}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9510565162951538, 0.3090169943749484}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"(", "\[NoBreak]", GridBox[{
+             {"\<\"Hay\"\>", "\<\"Wolf\"\>"},
+             {"\<\"Farmer\"\>", "\<\"Goat\"\>"}
+            },
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.7]}, 
+                Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+          Offset[{2, 2}, {-0.9284450513270008, 0.33162845934310126`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.9510565162951534, -0.30901699437494645`}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Wolf\"\>"}], "}"}], ",", 
+            RowBox[{"{", "\<\"Hay\"\>", "}"}]}], "}"}], 
+          Offset[{2, 2}, {-0.9284450513270006, -0.2864055294067936}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-0.5877852522924726, -0.8090169943749468}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "\<\"Wolf\"\>", "}"}], ",", 
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Hay\"\>"}], "}"}]}], "}"}], 
+          Offset[{2, 2}, {-0.5651737873243197, -0.786405529406794}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{6.049014748177263*^-16, -1.}, 0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "\<\"Goat\"\>", "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Hay\"\>", 
+              ",", "\<\"Wolf\"\>"}], "}"}]}], "}"}], 
+          Offset[{2, 2}, {0.022611464968153465`, -0.9773885350318472}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5877852522924738, -0.8090169943749481}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Hay\"\>", 
+              ",", "\<\"Wolf\"\>"}], "}"}], ",", 
+            RowBox[{"{", "\<\"Goat\"\>", "}"}]}], "}"}], 
+          Offset[{2, 2}, {0.6103967172606266, -0.7864055294067953}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9510565162951539, -0.3090169943749485}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "\<\"Hay\"\>", "}"}], ",", 
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Wolf\"\>"}], "}"}]}], "}"}], 
+          Offset[{2, 2}, {0.9736679812633067, -0.28640552940679564`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.9510565162951533, 0.30901699437494634`}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Hay\"\>"}], "}"}], ",", 
+            RowBox[{"{", "\<\"Wolf\"\>", "}"}]}], "}"}], 
+          Offset[{2, 2}, {0.9736679812633062, 0.3316284593430992}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{0.5877852522924726, 0.8090169943749468}, 
+          0.02261146496815286], InsetBox[
+          RowBox[{"(", "\[NoBreak]", GridBox[{
+             {"\<\"Farmer\"\>", "\<\"Goat\"\>"},
+             {"\<\"Hay\"\>", "\<\"Wolf\"\>"}
+            },
+            
+            GridBoxAlignment->{
+             "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.7]}, 
+                Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+          Offset[{2, 2}, {0.6103967172606255, 0.8316284593430996}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}, {
+         DiskBox[{-7.044813998280222*^-16, 1.}, 0.02261146496815286], InsetBox[
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "}"}], ",", 
+            RowBox[{"{", 
+             
+             RowBox[{"\<\"Farmer\"\>", ",", "\<\"Goat\"\>", 
+              ",", "\<\"Hay\"\>", ",", "\<\"Wolf\"\>"}], "}"}]}], "}"}], 
+          Offset[{2, 2}, {0.022611464968152157`, 1.0226114649681528`}], 
+          ImageScaled[{0, 0}],
+          BaseStyle->"Graphics"]}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{633., Automatic}]], "Output",
+ CellChangeTimes->{{3.736812143201086*^9, 3.736812148919568*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1328, 561},
-WindowMargins->{{Automatic, -6}, {Automatic, 34}},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"ReverseColor.nb"
 ]
@@ -2022,7 +2460,11 @@ Cell[CellGroupData[{
 Cell[83683, 1588, 111, 1, 43, "Subsection"],
 Cell[CellGroupData[{
 Cell[83819, 1593, 6616, 175, 472, "Input"],
-Cell[90438, 1770, 9159, 184, 477, "Output"]
+Cell[90438, 1770, 9159, 184, 444, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99634, 1959, 7912, 220, 572, "Input"],
+Cell[107549, 2181, 9755, 211, 582, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
