@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     88861,       1483]
-NotebookOptionsPosition[     88616,       1470]
-NotebookOutlinePosition[     88960,       1485]
-CellTagsIndexPosition[     88917,       1482]
+NotebookDataLength[     92311,       1583]
+NotebookOptionsPosition[     91985,       1568]
+NotebookOutlinePosition[     92329,       1583]
+CellTagsIndexPosition[     92286,       1580]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1466,7 +1466,105 @@ CCGEEEIIIYQQQgghhBTm/wCcNf04
   DefaultBaseStyle->"ImageGraphics",
   ImageSize->Automatic,
   ImageSizeRaw->{1120, 298},
-  PlotRange->{{0, 1120}, {0, 298}}]], "Input"]
+  PlotRange->{{0, 1120}, {0, 298}}]], "Input"],
+
+Cell[TextData[{
+ "Define A[i] as the solution, i.e., the max profit get from establishing \
+stores at location 1..i. To establish a recurrence relation between A\
+\[CloseCurlyQuote]s, consider the following points.\n- There could be a store \
+a location i, or not.\n- If there is a store at location i, then A[i] could \
+be represented by less number of locations.\nA[i] = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    RowBox[{"i", ",", "j"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " A[j]\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    RowBox[{"i", ",", "j"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "=",
+ Cell[BoxData[
+  FormBox[
+   TagBox[GridBox[{
+      {"\[Piecewise]", GridBox[{
+         {"1", 
+          RowBox[{
+           RowBox[{"\[LeftBracketingBar]", 
+            RowBox[{
+             SubscriptBox["m", "i"], "-", 
+             SubscriptBox["m", "j"]}], "\[RightBracketingBar]"}], 
+           "\[GreaterSlantEqual]", "k"}]},
+         {"0", "otherwise"}
+        },
+        AllowedDimensions->{2, Automatic},
+        Editable->True,
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}},
+           "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.84]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}},
+        Selectable->True]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.35]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    "Piecewise",
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n- If there is no store at location i, then A[i] = A[i-1].\nTherefore, the \
+dynamic solution is A[i] = Max[A[i-1],  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", 
+    RowBox[{"i", ",", "j"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " A[j]], where A[1] = ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["m", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.741631723861792*^9, 3.7416319303392115`*^9}, {
+  3.741639815153431*^9, 3.7416398842909956`*^9}, {3.7416399279921865`*^9, 
+  3.74164002697218*^9}, {3.7416400571583414`*^9, 3.7416402995851345`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7416398770256915`*^9, 3.7416398782287617`*^9}}]
 },
 WindowSize->{759, 581},
 WindowMargins->{{Automatic, 295}, {24, Automatic}},
@@ -1484,10 +1582,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 88054, 1448, 171, "Input"]
+Cell[558, 20, 88054, 1448, 171, "Input"],
+Cell[88615, 1470, 3267, 93, 191, "Text"],
+Cell[91885, 1565, 96, 1, 31, "Input"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
