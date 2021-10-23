@@ -1,0 +1,235 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6276,        225]
+NotebookOptionsPosition[      5738,        201]
+NotebookOutlinePosition[      6085,        216]
+CellTagsIndexPosition[      6042,        213]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t", "=", 
+   RowBox[{"Permutations", "[", 
+    RowBox[{"Range", "[", "4", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", "t", "]"}]}], "Input",
+ CellChangeTimes->{{3.8367624043454623`*^9, 3.8367624224506245`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1", "2", "3", "4"},
+    {"1", "2", "4", "3"},
+    {"1", "3", "2", "4"},
+    {"1", "3", "4", "2"},
+    {"1", "4", "2", "3"},
+    {"1", "4", "3", "2"},
+    {"2", "1", "3", "4"},
+    {"2", "1", "4", "3"},
+    {"2", "3", "1", "4"},
+    {"2", "3", "4", "1"},
+    {"2", "4", "1", "3"},
+    {"2", "4", "3", "1"},
+    {"3", "1", "2", "4"},
+    {"3", "1", "4", "2"},
+    {"3", "2", "1", "4"},
+    {"3", "2", "4", "1"},
+    {"3", "4", "1", "2"},
+    {"3", "4", "2", "1"},
+    {"4", "1", "2", "3"},
+    {"4", "1", "3", "2"},
+    {"4", "2", "1", "3"},
+    {"4", "2", "3", "1"},
+    {"4", "3", "1", "2"},
+    {"4", "3", "2", "1"}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.8367625939956236`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{"t", ",", 
+   RowBox[{"Dividers", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"False", ",", "False", ",", "True"}], "}"}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.836762598027646*^9, 3.836762618378729*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1", "2", "3", "4"},
+    {"1", "2", "4", "3"},
+    {"1", "3", "2", "4"},
+    {"1", "3", "4", "2"},
+    {"1", "4", "2", "3"},
+    {"1", "4", "3", "2"},
+    {"2", "1", "3", "4"},
+    {"2", "1", "4", "3"},
+    {"2", "3", "1", "4"},
+    {"2", "3", "4", "1"},
+    {"2", "4", "1", "3"},
+    {"2", "4", "3", "1"},
+    {"3", "1", "2", "4"},
+    {"3", "1", "4", "2"},
+    {"3", "2", "1", "4"},
+    {"3", "2", "4", "1"},
+    {"3", "4", "1", "2"},
+    {"3", "4", "2", "1"},
+    {"4", "1", "2", "3"},
+    {"4", "1", "3", "2"},
+    {"4", "2", "1", "3"},
+    {"4", "2", "3", "1"},
+    {"4", "3", "1", "2"},
+    {"4", "3", "2", "1"}
+   },
+   AutoDelete->False,
+   GridBoxDividers->{"Columns" -> {False, False, True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.8367626197620726`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"GroupBy", "[", 
+    RowBox[{"t", ",", 
+     RowBox[{
+      RowBox[{"Sort", "@", 
+       RowBox[{"Take", "[", 
+        RowBox[{"#", ",", "2"}], "]"}]}], "&"}]}], "]"}], "//", "Values"}], "//", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Grid", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"Dividers", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"False", ",", "False", ",", "True"}], "}"}], "}"}]}]}], 
+      "]"}], "&"}], "/@", "#"}], "&"}]}]], "Input",
+ CellChangeTimes->{{3.836762725645316*^9, 3.8367627609455814`*^9}, {
+  3.8367628034122677`*^9, 3.8367629253123093`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"1", "2", "3", "4"},
+      {"1", "2", "4", "3"},
+      {"2", "1", "3", "4"},
+      {"2", "1", "4", "3"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"1", "3", "2", "4"},
+      {"1", "3", "4", "2"},
+      {"3", "1", "2", "4"},
+      {"3", "1", "4", "2"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"1", "4", "2", "3"},
+      {"1", "4", "3", "2"},
+      {"4", "1", "2", "3"},
+      {"4", "1", "3", "2"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"2", "3", "1", "4"},
+      {"2", "3", "4", "1"},
+      {"3", "2", "1", "4"},
+      {"3", "2", "4", "1"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"2", "4", "1", "3"},
+      {"2", "4", "3", "1"},
+      {"4", "2", "1", "3"},
+      {"4", "2", "3", "1"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"], ",", 
+   TagBox[GridBox[{
+      {"3", "4", "1", "2"},
+      {"3", "4", "2", "1"},
+      {"4", "3", "1", "2"},
+      {"4", "3", "2", "1"}
+     },
+     AutoDelete->False,
+     GridBoxDividers->{"Columns" -> {False, False, True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8367627359122133`*^9, 3.8367627623284807`*^9}, {
+  3.836762808461863*^9, 3.8367628277620144`*^9}, {3.8367628657588243`*^9, 
+  3.836762926728902*^9}}]
+}, Open  ]]
+},
+WindowSize->{720, 1197},
+WindowMargins->{{-1088, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 271, 6, 52, "Input"],
+Cell[854, 30, 824, 30, 396, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1715, 65, 285, 8, 31, "Input"],
+Cell[2003, 75, 881, 31, 396, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2921, 111, 659, 20, 52, "Input"],
+Cell[3583, 133, 2139, 65, 109, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

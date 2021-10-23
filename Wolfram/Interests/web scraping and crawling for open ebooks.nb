@@ -1,0 +1,327 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11865,        319]
+NotebookOptionsPosition[     10562,        275]
+NotebookOutlinePosition[     10905,        290]
+CellTagsIndexPosition[     10862,        287]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"https", ":"}], "//", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"community", ".", "wolfram", ".", "com"}], "/", "groups"}], 
+      "/", "-"}], "/", "m"}], "/", "t"}], "/", "2296244"}]}]], "Text",
+ CellChangeTimes->{{3.833727621429946*^9, 3.8337276548793077`*^9}}],
+
+Cell["Import a page that has links to other sites.", "Text",
+ CellChangeTimes->{{3.833727876014536*^9, 3.8337278874059105`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Import", "[", 
+   RowBox[{
+   "\"\<https://marcusnunes.me/posts/livros-gratuitos-da-springer/\>\"", ",", 
+    "\"\<Hyperlinks\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8337276745014944`*^9, 3.8337276745134954`*^9}, 
+   3.8337278942718506`*^9}],
+
+Cell["Get one link to check", "Text",
+ CellChangeTimes->{{3.833727904029253*^9, 3.8337279082744102`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Import", "[", 
+   RowBox[{
+   "\"\<https://link.springer.com/book/10.1007%2F1-84628-168-7\>\"", ",", 
+    "\"\<Hyperlinks\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8337279215763736`*^9, 3.833727936815256*^9}}],
+
+Cell["Find links wtih PDF files", "Text",
+ CellChangeTimes->{{3.833727948615291*^9, 3.8337279557432785`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringContainsQ", "[", 
+  RowBox[{"%", ",", "\"\<pdf\>\"", ",", " ", 
+   RowBox[{"IgnoreCase", " ", "\[Rule]", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8337279591878495`*^9, 3.8337279737543716`*^9}, 
+   3.833728015120368*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "True", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False"}], "}"}]], "Output",
+ CellChangeTimes->{3.833728018271371*^9}]
+}, Open  ]],
+
+Cell["Clean up the links that point to no pdf files", "Text",
+ CellChangeTimes->{{3.8337280623107767`*^9, 3.8337280802235785`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Pick", "[", 
+  RowBox[{"%%", ",", "%"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8337281056749067`*^9, 3.8337281321217365`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", \
+"\<\"https://link.springer.com/content/pdf/bfm%3A978-1-84628-168-6%2F1.pdf\"\>\
+", "}"}]], "Output",
+ CellChangeTimes->{3.8337281646216145`*^9}]
+}, Open  ]],
+
+Cell["download test - not supported", "Text",
+ CellChangeTimes->{{3.8337281986843877`*^9, 3.833728200576868*^9}, {
+  3.8337282436311846`*^9, 3.8337282476096325`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"URLDownload", "[", 
+  RowBox[{"%", ",", "\"\<~/Downloads/SpringerBooks\>\"", ",", 
+   RowBox[{"CreateIntermediateDirectories", "\[Rule]", "True"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8337282079663143`*^9, 3.8337282079783134`*^9}}],
+
+Cell["Do this for all links", "Text",
+ CellChangeTimes->{{3.833728292432635*^9, 3.8337283026316333`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"booklist", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{"#", ",", "\"\<Hyperlinks\>\""}], "]"}], "&"}], "/@", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+        "\"\<https://marcusnunes.me/posts/livros-gratuitos-da-springer/\>\"", 
+         ",", "\"\<Hyperlinks\>\""}], "]"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"StringContainsQ", "[", 
+       RowBox[{"#", ",", "\"\<pdf\>\"", ",", " ", 
+        RowBox[{"IgnoreCase", " ", "\[Rule]", " ", "True"}]}], "]"}], "&"}]}],
+     "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8337283125970573`*^9, 3.833728339135889*^9}, {
+  3.833728657376418*^9, 3.833728730742958*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FetchURL", "::", "httperr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The request to URL \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"http://www.linkedin.com/in/\
+marcusanunes\\\\\\\"\\\"}]\\)\[NoBreak] was not successful. The server \
+returned the HTTP status code \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"999\\\\\\\"\\\"}]\\)\[NoBreak].\"\>"}]]\
+, "Message", "MSG",
+ CellChangeTimes->{3.833728748269556*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"Import\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", ButtonNote -> \
+\\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337287483285537`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"FetchURL", "::", "httperr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The request to URL \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"https://marcusnunes.me/posts/livros-\
+gratuitos-da-springer/images/marcus_nunes_cv.pdf\\\\\\\"\\\"}]\\)\[NoBreak] \
+was not successful. The server returned the HTTP status code \[NoBreak]\\!\\(\
+\\*RowBox[{\\\"\\\\\\\"404 (\\\\\\\\\\\\\\\"Not \
+Found\\\\\\\\\\\\\\\")\\\\\\\"\\\"}]\\)\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337287490768137`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "noelem"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The Import element \\\"\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\
+\\\"Hyperlinks\\\\\\\"\\\"}]\\)\[NoBreak]\\\" is not present when importing \
+as \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"XLSX\\\\\\\"\\\"}]\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Import\\\", ButtonNote -> \
+\\\"Import::noelem\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337287542790203`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "noelem"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The Import element \\\"\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\
+\\\"Hyperlinks\\\\\\\"\\\"}]\\)\[NoBreak]\\\" is not present when importing \
+as \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"RSS\\\\\\\"\\\"}]\\)\[NoBreak]. \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Import\\\", ButtonNote -> \
+\\\"Import::noelem\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.833728886940282*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"StringContainsQ", "::", "strse"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"String or list of strings expected at position \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"1\\\"}]\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"pdf\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"IgnoreCase\\\", \\\"\[Rule]\\\", \\\"True\\\"}]}], \\\"]\\\"}]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/strse\\\", ButtonNote -> \
+\\\"StringContainsQ::strse\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337288870756416`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"StringContainsQ", "::", "strse"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"String or list of strings expected at position \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"1\\\"}]\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"pdf\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"IgnoreCase\\\", \\\"\[Rule]\\\", \\\"True\\\"}]}], \\\"]\\\"}]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/strse\\\", ButtonNote -> \
+\\\"StringContainsQ::strse\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337288871946425`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"StringContainsQ", "::", "strse"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"String or list of strings expected at position \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"1\\\"}]\\)\[NoBreak] in \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"pdf\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"IgnoreCase\\\", \\\"\[Rule]\\\", \\\"True\\\"}]}], \\\"]\\\"}]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/strse\\\", ButtonNote -> \
+\\\"StringContainsQ::strse\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337288873040457`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"StringContainsQ\\\", \\\"::\\\", \
+\\\"strse\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.8337288874246426`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"booklist", ";"}]], "Input",
+ CellChangeTimes->{{3.833728907240404*^9, 3.8337289084010425`*^9}, {
+  3.8337290916742835`*^9, 3.833729094187631*^9}}],
+
+Cell["\<\
+use Parallelize[] together with URLDownload[] to manage the download jobs.\
+\>", "Text",
+ CellChangeTimes->{{3.8337290997623973`*^9, 3.8337291241117973`*^9}}]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 12}, {Automatic, 53}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 336, 10, 31, "Text"],
+Cell[897, 32, 128, 1, 30, "Text"],
+Cell[1028, 35, 290, 7, 52, "Input"],
+Cell[1321, 44, 105, 1, 30, "Text"],
+Cell[1429, 47, 256, 6, 31, "Input"],
+Cell[1688, 55, 109, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1822, 60, 264, 5, 31, "Input"],
+Cell[2089, 67, 805, 13, 92, "Output"]
+}, Open  ]],
+Cell[2909, 83, 131, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[3065, 88, 151, 3, 31, "Input"],
+Cell[3219, 93, 174, 4, 31, "Output"]
+}, Open  ]],
+Cell[3408, 100, 166, 2, 30, "Text"],
+Cell[3577, 104, 263, 5, 31, "Input"],
+Cell[3843, 111, 105, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[3973, 116, 774, 20, 112, "Input"],
+Cell[4750, 138, 460, 11, 39, "Message"],
+Cell[5213, 151, 463, 10, 21, "Message"],
+Cell[5679, 163, 551, 11, 57, "Message"],
+Cell[6233, 176, 582, 11, 21, "Message"],
+Cell[6818, 189, 579, 11, 21, "Message"],
+Cell[7400, 202, 740, 14, 40, "Message"],
+Cell[8143, 218, 740, 14, 40, "Message"],
+Cell[8886, 234, 740, 14, 40, "Message"],
+Cell[9629, 250, 573, 12, 21, "Message"]
+}, Open  ]],
+Cell[10217, 265, 170, 3, 31, "Input"],
+Cell[10390, 270, 168, 3, 30, "Text"]
+}
+]
+*)
+
